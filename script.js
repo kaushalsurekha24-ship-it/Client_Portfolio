@@ -607,8 +607,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const CONTACT_CONFIG = {
     whatsappNumber: '918999160463', // Testing number: 8999160463
     emailProvider: 'web3forms',     // 'web3forms' or 'formspree'
-    web3formsAccessKey: '',         // <-- PASTE YOUR GENUINE WEB3FORMS ACCESS KEY HERE
-    formspreeEndpoint: ''           // <-- OR PASTE YOUR FORMSPREE ENDPOINT URL HERE
+    web3formsAccessKey: '5197087c-a0fe-426c-818d-b71ab9402632', // Web3Forms Access Key
+    formspreeEndpoint: ''           // Optional alternative
   };
 
   const contactForm = document.getElementById('strategic-contact-form');
@@ -736,34 +736,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       if (CONTACT_CONFIG.emailProvider === 'web3forms' && hasWeb3FormsKey) {
+        // Parse email or phone from the contact input
+        const emailMatch = data.phone.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+        const emailValue = emailMatch ? emailMatch[0] : (data.phone.includes('@') ? data.phone : undefined);
+        const phoneValue = !emailMatch && !data.phone.includes('@') ? data.phone : undefined;
+
+        const payload = {
+          access_key: CONTACT_CONFIG.web3formsAccessKey.trim(),
+          name: data.name,
+          email: emailValue,
+          phone: phoneValue,
+          contact_number: data.phone,
+          service: data.service,
+          brand: data.brand || 'Not Specified',
+          message: data.message,
+          from_name: data.name,
+          subject: `New Portfolio Enquiry: ${data.name} — ${data.service}`
+        };
+
         const response = await fetch('https://api.web3forms.com/submit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify({
-            access_key: CONTACT_CONFIG.web3formsAccessKey.trim(),
-            name: data.name,
-            email: data.phone.includes('@') ? data.phone : undefined,
-            contact_number: !data.phone.includes('@') ? data.phone : undefined,
-            service: data.service,
-            brand: data.brand || 'Not Specified',
-            message: data.message,
-            from_name: data.name,
-            subject: `New Portfolio Enquiry: ${data.name} - ${data.service}`
-          })
+          body: JSON.stringify(payload)
         });
 
-        const resData = await response.json();
+        const resData = await response.json().catch(() => ({}));
         if (response.ok && resData.success) {
           if (formStatusMsg) {
             formStatusMsg.className = 'form-status-msg success';
-            formStatusMsg.textContent = `Thank you, ${data.name}! Your enquiry has been delivered to our email inbox. We will respond within 24 business hours.`;
+            formStatusMsg.textContent = `Thank you, ${data.name}! Your enquiry has been delivered successfully. We will respond within 24 business hours.`;
           }
           if (contactForm) contactForm.reset();
         } else {
-          throw new Error(resData.message || 'Email delivery provider reported an error.');
+          throw new Error(resData.message || 'Email delivery provider reported an error. Please try again or reach out directly.');
         }
       } else if (hasFormspree) {
         const response = await fetch(CONTACT_CONFIG.formspreeEndpoint.trim(), {
