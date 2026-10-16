@@ -1,77 +1,82 @@
 /* ==========================================================================
-   SAKINA MURTAZA SAIFEE — DIGITAL MARKETING EXPERT
-   Official Luxury Editorial Portfolio & Curriculum Vitae
+   SAKINA MURTAZA SAIFEE — DIGITAL MARKETING EXPERT & CREATIVE PROFESSIONAL
+   Official Botanical Luxury Editorial Portfolio & Selected Work Showcase
    ──────────────────────────────────────────────────────────────────────────
-   PREMIUM COLOR SYSTEM TOKENS:
-     • Burgundy Maroon:       #5A202D (Main dark signature accent & Primary CTA)
-     • Pearl Ivory:           #FAF4ED (Dominant warm background)
-     • Champagne Beige:       #E7D5C6 (Selected alternating sections & borders)
-     • Dusty Rose:            #D4B7B8 (Muted & sophisticated accents)
-     • Muted Mauve:           #896A75 (Secondary text, signal curves & badges)
-     • Classic Lavender:      #C9B8D9 (Original site identity & glow accents)
-     • Deep Purple:           #321447 (Original site identity & dark sections)
-     • Rich Plum:             #49245F (Original site identity & gradient depth)
-     • Antique Champagne Gold:#B89A62 (Refined small highlights only)
-     • Espresso:              #35272A (Warm readable body text)
-     • White:                 #FFFFFF (Pristine surface cards)
+   COHESIVE LUXURY BOTANICAL PALETTE:
+     • Linen / Warm Background:   #F5F1EA (55–65% Dominant Surface)
+     • Soft White:                #FFFFFF (Pristine Cards & Surface Plagues)
+     • Khaki Beige:               #D7C9B8 (15–20% Secondary Warm Neutral)
+     • Camel:                     #B2967D (Restrained Warm Accent)
+     • Cocoa:                     #7D5A44 (Rich Cocoa Elements & Subtle Borders)
+     • Espresso:                  #4A342A (Headings, Content & Structural Contrast)
+     • Burgundy:                  #8B1E2D (Selective Headings & Primary Actions Only)
+     • Deep Wine:                 #5B0F1A (Grounded Final Footer & Accents)
+     • Antique Gold:              #C9A46D (Fine Botanical Line-Art, Icons & Lines)
+     • Soft Champagne Gold:       #D9BD87 (Gentle Glows & Secondary Botanical Highlights)
+     • Classic Lavender:          #C9B8D9 (Preserved Heritage Brand Accent)
+     • Deep Purple:               #321447 (Original Identity Depth Accent)
+     • Rich Plum:                 #49245F (Original Identity Depth Accent)
+     • Readable Neutral Text:     #35272A (Accessible Dark Neutral Text)
 
-   PROFESSIONAL EDITORIAL TYPOGRAPHY:
-     • Editorial Serif:       'Cormorant Garamond', 'Playfair Display', serif
-     • Modern UI Sans:        'Manrope', 'DM Sans', -apple-system, sans-serif
-     • Body Sans:             'DM Sans', 'Manrope', sans-serif
+   TYPOGRAPHY SYSTEM:
+     • Editorial Serif:           'Cormorant Garamond', 'Playfair Display', Georgia, serif
+     • Clean Modern Sans:         'Manrope', 'DM Sans', -apple-system, sans-serif
+     • Body Sans:                 'DM Sans', 'Manrope', sans-serif
    ========================================================================== */
 
 :root {
-  /* ── 1. Complete Specified Color Tokens ── */
-  --color-burgundy:            #5A202D;
-  --color-burgundy-dark:       #40141E;
-  --color-burgundy-rich:       #6E2838;
-  --color-burgundy-wash:       rgba(90, 32, 45, 0.08);
-  --color-burgundy-border:     rgba(90, 32, 45, 0.18);
-
-  --color-ivory:               #FAF4ED;
-  --color-ivory-soft:          #FDFBF8;
+  /* ── 1. Botanical Luxury Color Tokens (Exact Specifications) ── */
+  --color-linen:               #F5F1EA;
   --color-white:               #FFFFFF;
+  --color-khaki:               #D7C9B8;
+  --color-camel:               #B2967D;
+  --color-cocoa:               #7D5A44;
+  --color-espresso:            #4A342A;
+  --color-espresso-muted:      #5C453B;
+  --color-espresso-dark:       #2A1C16;
+  --color-text-neutral:        #35272A;
 
-  --color-beige:               #E7D5C6;
-  --color-beige-light:         #F3E9DF;
-  --color-beige-border:        #D8C4B2;
-  --color-beige-wash:          rgba(231, 213, 198, 0.45);
+  --color-burgundy:            #8B1E2D;
+  --color-burgundy-dark:       #6E1421;
+  --color-burgundy-rich:       #A32637;
+  --color-burgundy-wash:       rgba(139, 30, 45, 0.08);
+  --color-burgundy-border:     rgba(139, 30, 45, 0.22);
+  --color-wine:                #5B0F1A;
 
-  --color-dusty-rose:          #D4B7B8;
-  --color-rose-wash:           rgba(212, 183, 184, 0.22);
-  --color-rose-border:         rgba(212, 183, 184, 0.50);
-
-  --color-mauve:               #896A75;
-  --color-mauve-wash:          rgba(137, 106, 117, 0.14);
+  --color-gold:                #C9A46D;
+  --color-gold-light:          #D9BD87;
+  --color-gold-wash:           rgba(201, 164, 109, 0.12);
+  --color-gold-border:         rgba(201, 164, 109, 0.38);
 
   --color-lavender:            #C9B8D9;
-  --color-lavender-soft:       #ECE4F2;
-  --color-lavender-wash:       rgba(201, 184, 217, 0.24);
-  --color-lavender-border:     rgba(201, 184, 217, 0.55);
-
+  --color-lavender-soft:       #F2ECF7;
+  --color-lavender-wash:       rgba(201, 184, 217, 0.20);
+  --color-lavender-border:     rgba(201, 184, 217, 0.50);
   --color-purple:              #321447;
   --color-plum:                #49245F;
 
-  --color-gold:                #B89A62;
-  --color-gold-light:          #CEB37E;
-  --color-gold-wash:           rgba(184, 154, 98, 0.14);
-  --color-gold-border:         rgba(184, 154, 98, 0.40);
+  --color-dusty-rose:          #C8A8A0;
+  --color-rose-wash:           rgba(200, 168, 160, 0.18);
+  --color-rose-border:         rgba(200, 168, 160, 0.45);
+  --color-mauve:               var(--color-cocoa);
 
-  --color-espresso:            #35272A;
-  --color-espresso-muted:      #574448;
-  --color-espresso-dark:       #231719;
+  /* Semantic Aliases for Uniform Architecture */
+  --color-ivory:               var(--color-linen);
+  --color-ivory-soft:          #FAF7F2;
+  --color-beige:               var(--color-khaki);
+  --color-beige-light:         #EFE8E0;
+  --color-beige-border:        #CFBFAF;
+  --color-beige-wash:          rgba(215, 201, 184, 0.35);
 
-  /* Semantic Aliases for Global UI Uniformity */
-  --ivory-primary:             var(--color-ivory);
-  --beige-warm:                var(--color-beige);
-  --beige-light:               var(--color-beige-light);
+  --ivory-primary:             var(--color-linen);
+  --beige-warm:                var(--color-khaki);
+  --beige-light:               #EFE8E0;
   --lavender-soft:             var(--color-lavender-soft);
   --lavender-muted:            var(--color-lavender);
-  --mauve-dusty:               var(--color-mauve);
-  --plum-deep:                 var(--color-burgundy);
-  --aubergine-rich:            var(--color-plum);
-  --charcoal-dark:             var(--color-espresso);
+  --mauve-dusty:               var(--color-cocoa);
+  --plum-deep:                 var(--color-espresso); /* KEY FIX: stops rogue maroon propagation */
+  --aubergine-rich:            var(--color-cocoa);
+  --charcoal-dark:             var(--color-espresso-dark);
   --white-soft:                var(--color-white);
 
   /* Authentic Client Project Brand Accents */
@@ -95,11 +100,11 @@
   --transition-smooth:         0.38s var(--ease-cinematic);
   --transition-card:           0.45s var(--ease-cinematic);
 
-  --shadow-subtle:             0 4px 20px rgba(53, 39, 42, 0.04);
-  --shadow-card:               0 10px 30px rgba(53, 39, 42, 0.07);
-  --shadow-hover:              0 18px 45px rgba(90, 32, 45, 0.12);
-  --shadow-burgundy:           0 8px 24px rgba(90, 32, 45, 0.28);
-  --shadow-dark:               0 20px 48px rgba(35, 23, 25, 0.35);
+  --shadow-subtle:             0 4px 20px rgba(74, 52, 42, 0.04);
+  --shadow-card:               0 10px 30px rgba(74, 52, 42, 0.07);
+  --shadow-hover:              0 18px 45px rgba(125, 90, 68, 0.14);
+  --shadow-burgundy:           0 8px 24px rgba(139, 30, 45, 0.26);
+  --shadow-dark:               0 20px 48px rgba(42, 28, 22, 0.35);
 }
 
 /* ==========================================================================
@@ -114,16 +119,16 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
-  background-color: var(--color-ivory);
-  color: var(--color-espresso);
+  background-color: var(--color-linen);
+  color: var(--color-text-neutral);
 }
 
 body.theme-classic-ivory,
 body {
   font-family: var(--font-body);
   font-weight: 400;
-  color: var(--color-espresso);
-  background-color: var(--color-ivory);
+  color: var(--color-text-neutral);
+  background-color: var(--color-linen);
   line-height: 1.7;
   overflow-x: hidden;
   position: relative;
@@ -134,11 +139,11 @@ body {
 
 /* Base Utility Classes */
 .text-center { text-align: center; }
-.text-plum { color: var(--color-burgundy); }
+.text-plum { color: var(--color-espresso); }
 .text-serif-accent {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   font-weight: 600;
 }
 
@@ -150,14 +155,14 @@ body {
 }
 
 .section-container {
-  padding: 120px 0;
+  padding: 110px 0;
   position: relative;
-  background: var(--color-ivory);
+  background: var(--color-linen);
 }
 
 .section-header {
   max-width: 760px;
-  margin: 0 auto 64px auto;
+  margin: 0 auto 56px auto;
 }
 
 .section-tag-badge {
@@ -165,17 +170,24 @@ body {
   align-items: center;
   gap: 8px;
   font-family: var(--font-heading);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--color-burgundy);
-  background: var(--color-lavender-soft);
-  border: 1px solid var(--color-lavender-border);
+  color: var(--color-espresso);
+  background: #FFFFFF;
+  border: 1px solid var(--color-khaki);
   padding: 6px 18px;
   border-radius: 9999px;
   margin-bottom: 18px;
-  box-shadow: 0 2px 8px rgba(90, 32, 45, 0.04);
+  box-shadow: 0 2px 8px rgba(74, 52, 42, 0.04);
+}
+
+.section-tag-badge .badge-leaf-svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--color-gold);
+  flex-shrink: 0;
 }
 
 .section-main-heading {
@@ -189,11 +201,33 @@ body {
 }
 
 .section-sub-heading {
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   color: var(--color-espresso-muted);
   line-height: 1.7;
   max-width: 660px;
   margin: 0 auto;
+}
+
+/* Botanical Decorative Divider Line & Leaf Motif */
+.botanical-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 18px 0;
+  opacity: 0.85;
+}
+
+.botanical-separator .botanical-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold-border), var(--color-gold), transparent);
+}
+
+.botanical-separator .botanical-motif {
+  flex-shrink: 0;
 }
 
 /* Ambient Subtle Lavender & Champagne Glow */
@@ -211,7 +245,7 @@ body {
   transform: translate(-50%, -50%);
   width: 780px;
   height: 780px;
-  background: radial-gradient(circle, rgba(201, 184, 217, 0.40) 0%, rgba(231, 213, 198, 0.30) 45%, transparent 75%);
+  background: radial-gradient(circle, rgba(201, 184, 217, 0.35) 0%, rgba(217, 189, 135, 0.25) 45%, transparent 75%);
 }
 
 /* ==========================================================================
@@ -231,11 +265,11 @@ body {
 }
 
 .transparent-navbar.navbar-scrolled {
-  background: rgba(250, 244, 237, 0.92);
+  background: rgba(245, 241, 234, 0.94);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(231, 213, 198, 0.85);
-  box-shadow: 0 4px 24px rgba(90, 32, 45, 0.05);
+  border-bottom: 1px solid rgba(215, 201, 184, 0.75);
+  box-shadow: 0 4px 24px rgba(74, 52, 42, 0.05);
 }
 
 .nav-container {
@@ -264,19 +298,19 @@ body {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: var(--color-burgundy);
-  color: var(--color-ivory);
+  background: var(--color-espresso);
+  color: var(--color-linen);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.92rem;
-  box-shadow: 0 4px 14px rgba(90, 32, 45, 0.28);
+  box-shadow: 0 4px 14px rgba(74, 52, 42, 0.22);
   transition: transform var(--transition-fast), background var(--transition-fast);
 }
 
 .brand-logo:hover .logo-circle {
   transform: scale(1.06);
-  background: var(--color-burgundy-dark);
+  background: var(--color-burgundy);
 }
 
 .logo-text {
@@ -316,7 +350,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--color-burgundy);
+  background: var(--color-gold);
   transition: width var(--transition-fast);
   border-radius: 9999px;
 }
@@ -326,7 +360,7 @@ body {
 }
 
 .nav-link-highlight {
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   font-weight: 700;
   background: var(--color-lavender-soft);
   padding: 5px 14px;
@@ -340,7 +374,7 @@ body {
 
 .nav-link-highlight:hover {
   background: var(--color-lavender);
-  color: var(--color-burgundy-dark);
+  color: var(--color-espresso-dark);
 }
 
 .nav-right {
@@ -352,7 +386,7 @@ body {
 /* ==========================================================================
    BUTTON DESIGN SYSTEM
    ========================================================================== */
-/* Primary Actions: Burgundy Maroon with warm white text */
+/* Primary Actions: Rich Burgundy with Soft Champagne Gold Icon */
 .btn-pill-plum {
   display: inline-flex;
   align-items: center;
@@ -382,14 +416,14 @@ body {
   background: var(--color-burgundy-dark);
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(90, 32, 45, 0.36);
+  box-shadow: 0 10px 28px rgba(139, 30, 45, 0.36);
 }
 
 .btn-pill-plum:hover i {
   transform: translateX(3px);
 }
 
-/* Secondary Actions: Pearl Ivory with Burgundy Maroon borders */
+/* Secondary Actions: Warm Linen with Camel Borders & Espresso Text */
 .btn-pill-beige {
   display: inline-flex;
   align-items: center;
@@ -401,16 +435,16 @@ body {
   font-weight: 700;
   text-decoration: none;
   border-radius: 9999px;
-  background: var(--color-ivory);
-  color: var(--color-burgundy);
-  border: 1.5px solid var(--color-burgundy);
+  background: var(--color-linen);
+  color: var(--color-espresso);
+  border: 1.5px solid var(--color-camel);
   box-shadow: var(--shadow-subtle);
   transition: all var(--transition-fast);
 }
 
 .btn-pill-beige:hover {
-  background: var(--color-burgundy);
-  border-color: var(--color-burgundy);
+  background: var(--color-camel);
+  border-color: var(--color-camel);
   color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
@@ -709,20 +743,43 @@ body {
   pointer-events: none;
 }
 
+/* Delicate Antique Gold Botanical Hero Corner Line-Art */
+.hero-botanical-corner {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0.65;
+  transition: opacity 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  .hero-botanical-corner {
+    width: 90px;
+    height: 90px;
+    top: 16px;
+    right: 16px;
+    opacity: 0.45;
+  }
+}
+
 .hero-eyebrow-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--color-ivory);
-  border: 1px solid var(--color-gold-border);
+  background: #FFFFFF;
+  border: 1px solid var(--color-khaki);
   padding: 5px 16px;
   border-radius: 9999px;
-  box-shadow: 0 2px 6px rgba(53, 39, 42, 0.04);
+  box-shadow: 0 2px 6px rgba(74, 52, 42, 0.04);
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   margin-bottom: 14px;
 }
 
@@ -731,7 +788,7 @@ body {
   height: 8px;
   border-radius: 50%;
   background: var(--color-gold);
-  box-shadow: 0 0 8px rgba(184, 154, 98, 0.6);
+  box-shadow: 0 0 8px rgba(201, 164, 109, 0.6);
 }
 
 .hero-title-group {
@@ -745,7 +802,7 @@ body {
   font-family: var(--font-serif);
   font-size: clamp(2.4rem, 4.8vw, 3.8rem);
   font-weight: 700;
-  color: var(--color-burgundy);
+  color: var(--color-espresso-dark);
   line-height: 1.15;
   letter-spacing: -0.5px;
   padding: 0 10px;
@@ -755,7 +812,7 @@ body {
   font-family: var(--font-heading);
   font-size: clamp(1rem, 1.6vw, 1.25rem);
   font-weight: 800;
-  color: var(--color-espresso);
+  color: var(--color-burgundy);
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
@@ -773,8 +830,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: #FFFFFF;
+  border: 1px solid var(--color-khaki);
   color: var(--color-espresso);
   padding: 5px 14px;
   border-radius: 9999px;
@@ -782,12 +839,12 @@ body {
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.2px;
-  box-shadow: 0 1px 4px rgba(53, 39, 42, 0.04);
+  box-shadow: 0 1px 4px rgba(74, 52, 42, 0.04);
   transition: all var(--transition-fast);
 }
 
 .hero-discipline-pill i {
-  color: var(--color-burgundy);
+  color: var(--color-gold);
   font-size: 0.78rem;
 }
 
@@ -834,7 +891,7 @@ body {
   width: 18px;
   height: 26px;
   border-radius: 9999px;
-  border: 1.5px solid var(--color-burgundy);
+  border: 1.5px solid var(--color-gold);
   display: flex;
   justify-content: center;
   padding-top: 4px;
@@ -843,7 +900,7 @@ body {
 .wheel-dot {
   width: 3.5px;
   height: 5px;
-  background: var(--color-burgundy);
+  background: var(--color-gold);
   border-radius: 9999px;
   animation: mouseWheel 1.6s infinite ease-in-out;
 }
@@ -865,14 +922,14 @@ body {
 
 .milestone-card {
   position: absolute;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
-  border: 1.5px solid rgba(231, 213, 198, 0.95);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 24px;
   padding: 24px 28px;
   max-width: 380px;
-  box-shadow: 0 16px 40px rgba(53, 39, 42, 0.12), 0 2px 12px rgba(201, 184, 217, 0.25);
+  box-shadow: 0 16px 40px rgba(74, 52, 42, 0.08), 0 2px 12px rgba(201, 164, 109, 0.15);
   opacity: 0;
   transform: translateY(18px) scale(0.96);
   transition: opacity 0.45s ease, transform 0.45s var(--ease-cinematic);
@@ -909,7 +966,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   background: var(--color-lavender-soft);
   border: 1px solid var(--color-lavender-border);
   padding: 4px 12px;
@@ -1211,8 +1268,8 @@ body {
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: var(--color-dusty-rose);
-  box-shadow: var(--shadow-hover);
+  border-color: var(--color-gold);
+  box-shadow: 0 16px 45px rgba(74, 52, 42, 0.12);
 }
 
 .service-card-header {
@@ -1226,8 +1283,8 @@ body {
   font-family: var(--font-serif);
   font-size: 1.65rem;
   font-weight: 700;
-  color: var(--color-burgundy);
-  opacity: 0.85;
+  color: var(--color-gold);
+  opacity: 0.95;
 }
 
 .service-icon {
@@ -1235,12 +1292,12 @@ body {
   height: 48px;
   border-radius: 14px;
   background: var(--color-lavender-soft);
-  color: var(--color-burgundy);
+  color: var(--color-cocoa);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 4px 12px rgba(90, 32, 45, 0.1);
+  box-shadow: 0 4px 12px rgba(74, 52, 42, 0.08);
   transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
 }
 
@@ -1353,17 +1410,18 @@ body {
 /* Case Study Cards */
 .case-study-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 28px;
   padding: 44px 40px;
   margin-bottom: 36px;
   box-shadow: var(--shadow-subtle);
   transition: all var(--transition-card);
+  position: relative;
 }
 
 .case-study-card:hover {
-  box-shadow: var(--shadow-hover);
-  border-color: var(--color-dusty-rose);
+  box-shadow: 0 16px 45px rgba(74, 52, 42, 0.10);
+  border-color: var(--color-gold);
 }
 
 .case-card-grid {
@@ -1433,8 +1491,8 @@ body {
 }
 
 .case-deliverables-box {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: var(--color-linen);
+  border: 1px solid var(--color-khaki);
   border-radius: 18px;
   padding: 18px 20px;
   margin-bottom: 18px;
@@ -1446,7 +1504,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   margin-bottom: 12px;
 }
 
@@ -1466,7 +1524,7 @@ body {
   align-items: center;
   gap: 6px;
   background: #FFFFFF;
-  border: 1px solid var(--color-beige);
+  border: 1px solid var(--color-khaki);
   color: var(--color-espresso);
 }
 
@@ -1481,7 +1539,7 @@ body {
 .case-scope-action {
   margin-top: 18px;
   padding-top: 14px;
-  border-top: 1px solid var(--color-beige);
+  border-top: 1px solid var(--color-khaki);
 }
 
 .btn-toggle-scope {
@@ -1490,9 +1548,9 @@ body {
   gap: 8px;
   padding: 8px 18px;
   border-radius: 9999px;
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
-  color: var(--color-burgundy);
+  background: #FFFFFF;
+  border: 1px solid var(--color-khaki);
+  color: var(--color-espresso);
   font-family: var(--font-heading);
   font-size: 0.82rem;
   font-weight: 700;
@@ -1501,8 +1559,9 @@ body {
 }
 
 .btn-toggle-scope:hover {
-  background: var(--color-lavender-soft);
-  border-color: var(--color-lavender);
+  background: var(--color-linen);
+  border-color: var(--color-gold);
+  color: var(--color-burgundy);
   transform: translateY(-1px);
 }
 
@@ -1529,8 +1588,8 @@ body {
 }
 
 .scope-drawer-content {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: var(--color-linen);
+  border: 1px solid var(--color-khaki);
   border-radius: 16px;
   padding: 18px 22px;
 }
@@ -1539,7 +1598,7 @@ body {
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 800;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   margin-bottom: 10px;
 }
 
@@ -2445,18 +2504,18 @@ body {
   gap: 8px;
   padding: 11px 24px;
   border-radius: 9999px;
-  background: #FFFFFF;
-  color: var(--color-burgundy);
+  background: var(--color-linen);
+  color: var(--color-espresso);
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
-  border: 1.5px solid var(--color-burgundy);
+  border: 1.5px solid var(--color-camel);
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
 .btn-call-resume:hover {
-  background: var(--color-burgundy);
+  background: var(--color-camel);
   color: #FFFFFF;
   transform: translateY(-2px);
 }
@@ -2478,7 +2537,7 @@ body {
 
 .resume-profile-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 22px;
   padding: 28px 24px;
   box-shadow: var(--shadow-subtle);
@@ -2489,14 +2548,14 @@ body {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: var(--color-burgundy);
-  color: #FFFFFF;
+  background: var(--color-espresso);
+  color: var(--color-gold-light);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.45rem;
   margin: 0 auto 16px auto;
-  box-shadow: 0 4px 16px rgba(90, 32, 45, 0.25);
+  box-shadow: 0 4px 16px rgba(74, 52, 42, 0.22);
 }
 
 .resume-candidate-name {
@@ -2511,7 +2570,7 @@ body {
   font-family: var(--font-heading);
   font-size: 0.84rem;
   font-weight: 800;
-  color: var(--color-burgundy);
+  color: var(--color-cocoa);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -2533,9 +2592,9 @@ body {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--color-burgundy);
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  color: var(--color-espresso);
+  background: var(--color-linen);
+  border: 1px solid var(--color-khaki);
   padding: 6px 14px;
   border-radius: 9999px;
   text-decoration: none;
@@ -2543,13 +2602,13 @@ body {
 }
 
 .resume-phone-badge:hover {
-  background: var(--color-burgundy);
-  color: #FFFFFF;
+  background: var(--color-gold);
+  color: var(--color-espresso-dark);
 }
 
 .resume-side-block {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 20px;
   padding: 24px;
   box-shadow: var(--shadow-subtle);
@@ -2559,13 +2618,17 @@ body {
   font-family: var(--font-heading);
   font-size: 0.94rem;
   font-weight: 800;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   display: flex;
   align-items: center;
   gap: 8px;
   margin-bottom: 14px;
-  border-bottom: 1px solid var(--color-beige);
+  border-bottom: 1px solid var(--color-khaki);
   padding-bottom: 8px;
+}
+
+.side-block-heading i {
+  color: var(--color-gold);
 }
 
 .side-block-list {
@@ -2602,8 +2665,8 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-espresso);
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: var(--color-linen);
+  border: 1px solid var(--color-khaki);
   padding: 5px 12px;
   border-radius: 9999px;
 }
@@ -2627,7 +2690,7 @@ body {
 .edu-inst {
   display: block;
   font-size: 0.82rem;
-  color: var(--color-burgundy);
+  color: var(--color-cocoa);
   font-weight: 700;
   margin-bottom: 4px;
 }
@@ -2647,7 +2710,7 @@ body {
 
 .resume-section-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 24px;
   padding: 34px 32px;
   box-shadow: var(--shadow-subtle);
@@ -2662,12 +2725,12 @@ body {
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
-  border-bottom: 1px solid var(--color-beige);
+  border-bottom: 1px solid var(--color-khaki);
   padding-bottom: 14px;
 }
 
 .resume-card-title i {
-  color: var(--color-burgundy);
+  color: var(--color-gold);
 }
 
 .resume-summary-text {
@@ -2691,19 +2754,19 @@ body {
   bottom: 10px;
   left: 7px;
   width: 2.5px;
-  background: linear-gradient(180deg, var(--color-burgundy) 0%, var(--color-gold) 45%, var(--color-lavender) 80%, var(--color-beige) 100%);
+  background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-camel) 45%, var(--color-lavender) 80%, var(--color-khaki) 100%);
   border-radius: 9999px;
 }
 
 @keyframes radarPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(90, 32, 45, 0.7);
+    box-shadow: 0 0 0 0 rgba(201, 164, 109, 0.7);
   }
   70% {
-    box-shadow: 0 0 0 8px rgba(90, 32, 45, 0);
+    box-shadow: 0 0 0 8px rgba(201, 164, 109, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(90, 32, 45, 0);
+    box-shadow: 0 0 0 0 rgba(201, 164, 109, 0);
   }
 }
 
@@ -2723,15 +2786,15 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--color-burgundy);
-  border: 3px solid var(--color-ivory);
-  box-shadow: 0 0 0 2px var(--color-gold);
+  background: var(--color-gold);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 0 0 2px var(--color-gold-border);
   animation: radarPulse 2.4s infinite ease-in-out;
   transition: all 0.3s ease;
 }
 
 .exp-timeline-item:hover .exp-timeline-marker {
-  background: var(--color-burgundy-dark);
+  background: var(--color-burgundy);
   transform: scale(1.22);
 }
 
@@ -2757,9 +2820,9 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--color-burgundy);
-  background: var(--color-lavender-soft);
-  border: 1px solid var(--color-lavender-border);
+  color: var(--color-espresso);
+  background: var(--color-beige-light);
+  border: 1px solid var(--color-khaki);
   padding: 3px 10px;
   border-radius: 9999px;
 }
@@ -2794,8 +2857,8 @@ body {
 }
 
 .skill-category-box {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: var(--color-linen);
+  border: 1px solid var(--color-khaki);
   border-radius: 16px;
   padding: 18px 16px;
 }
@@ -2807,9 +2870,9 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--color-burgundy);
+  color: var(--color-espresso);
   margin-bottom: 12px;
-  border-bottom: 1px solid var(--color-beige);
+  border-bottom: 1px solid var(--color-khaki);
   padding-bottom: 6px;
 }
 
@@ -2825,7 +2888,7 @@ body {
   font-weight: 700;
   color: var(--color-espresso);
   background: #FFFFFF;
-  border: 1px solid var(--color-beige);
+  border: 1px solid var(--color-khaki);
   padding: 4px 10px;
   border-radius: 9999px;
   transition: all var(--transition-fast);
@@ -2841,8 +2904,8 @@ body {
    SECTION 7: ACHIEVEMENTS & CREDIBILITY (PEARL IVORY BACKGROUND)
    ========================================================================== */
 .achievements-section {
-  background: var(--color-ivory);
-  border-top: 1px solid var(--color-beige);
+  background: var(--color-linen);
+  border-top: 1px solid var(--color-khaki);
 }
 
 .achievements-timeline {
@@ -2853,16 +2916,16 @@ body {
 
 @keyframes achieveHalo {
   0%, 100% {
-    box-shadow: 0 4px 14px rgba(90, 32, 45, 0.22);
+    box-shadow: 0 4px 14px rgba(74, 52, 42, 0.16);
   }
   50% {
-    box-shadow: 0 4px 24px rgba(90, 32, 45, 0.5), 0 0 0 5px rgba(201, 184, 217, 0.4);
+    box-shadow: 0 4px 24px rgba(201, 164, 109, 0.4), 0 0 0 5px rgba(201, 184, 217, 0.3);
   }
 }
 
 .achievement-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 22px;
   padding: 34px 30px;
   display: flex;
@@ -2872,7 +2935,7 @@ body {
 
 .achievement-card:hover {
   transform: translateY(-6px);
-  border-color: var(--color-dusty-rose);
+  border-color: var(--color-gold);
   box-shadow: var(--shadow-hover);
 }
 
@@ -2888,19 +2951,20 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--color-burgundy);
+  background: var(--color-espresso);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 4px 14px rgba(90, 32, 45, 0.25);
+  box-shadow: 0 4px 14px rgba(74, 52, 42, 0.22);
   transition: transform 0.35s ease;
 }
 
 .achievement-card:hover .achieve-icon-circle {
   animation: achieveHalo 2s infinite ease-in-out;
   transform: scale(1.1);
+  background: var(--color-burgundy);
 }
 
 .achieve-tag {
@@ -2909,7 +2973,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: var(--color-burgundy);
+  color: var(--color-cocoa);
   text-align: center;
 }
 
@@ -2953,50 +3017,49 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 8: CONTACT & FOOTER SECTION
-   Deep Purple / Rich Plum / Burgundy Maroon Luxury Dark Gradient with Ivory Typography
+   SECTION 8: CONTACT SECTION (CALM LIGHT LINEN BACKGROUND)
    ========================================================================== */
 .contact-section {
-  padding: 110px 0 60px 0;
-  background: linear-gradient(165deg, #2A103C 0%, #3B1630 40%, #5A202D 100%);
-  color: var(--color-ivory);
-  border-top: 1px solid rgba(201, 184, 217, 0.2);
+  padding: 110px 0 80px 0;
+  background: var(--color-linen);
+  color: var(--color-espresso);
+  border-top: 1px solid var(--color-khaki);
   position: relative;
-  z-index: 30;
+  z-index: 25;
 }
 
 .badge-on-dark {
-  background: rgba(250, 244, 237, 0.12);
-  color: var(--color-ivory);
-  border: 1px solid rgba(201, 184, 217, 0.35);
+  background: #FFFFFF;
+  color: var(--color-espresso);
+  border: 1px solid var(--color-khaki);
 }
 
 .footer-title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 3.8vw, 3rem);
   font-weight: 700;
-  color: #FFFFFF;
+  color: var(--color-espresso-dark);
   margin-bottom: 12px;
   letter-spacing: -0.5px;
 }
 
 .footer-subtitle {
-  font-size: 1.12rem;
-  color: #E8DFEE;
+  font-size: 1.1rem;
+  color: var(--color-espresso-muted);
   max-width: 640px;
   margin: 0 auto 44px auto;
   line-height: 1.7;
 }
 
-/* Direct Inquiry Form (Elevated Light Surface) */
+/* Direct Inquiry Form (Elevated Soft White Surface) */
 .contact-form-wrapper {
   max-width: 680px;
-  margin: 0 auto 50px auto;
+  margin: 0 auto 44px auto;
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 24px;
   padding: 38px 34px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.32);
+  box-shadow: 0 16px 40px rgba(74, 52, 42, 0.08);
   text-align: left;
   color: var(--color-espresso);
 }
@@ -3018,16 +3081,16 @@ body {
 .form-label {
   font-family: var(--font-heading);
   font-size: 0.85rem;
-  font-weight: 800;
-  color: var(--color-burgundy);
+  font-weight: 700;
+  color: var(--color-espresso);
 }
 
 .form-input {
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--color-espresso);
-  background: var(--color-ivory);
-  border: 1.5px solid var(--color-beige);
+  background: var(--color-linen);
+  border: 1.5px solid var(--color-khaki);
   border-radius: 12px;
   padding: 12px 16px;
   transition: all var(--transition-fast);
@@ -3037,7 +3100,7 @@ body {
 .form-input:focus {
   background: #FFFFFF;
   border-color: var(--color-burgundy);
-  box-shadow: 0 0 0 4px rgba(90, 32, 45, 0.12);
+  box-shadow: 0 0 0 4px rgba(139, 30, 45, 0.12);
 }
 
 .form-select {
@@ -3096,7 +3159,7 @@ body {
 .btn-submit-email:hover {
   background: var(--color-burgundy-dark);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(90, 32, 45, 0.38);
+  box-shadow: 0 10px 28px rgba(139, 30, 45, 0.38);
 }
 
 .form-status-msg {
@@ -3110,13 +3173,13 @@ body {
 .form-status-msg.success { color: #166534; }
 .form-status-msg.error { color: #b91c1c; }
 
-/* Direct Contact Chips */
+/* Direct Contact Chips (Light Luxury Design) */
 .contact-links-pills {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .contact-chip {
@@ -3125,9 +3188,9 @@ body {
   gap: 8px;
   padding: 10px 22px;
   border-radius: 9999px;
-  background: rgba(250, 244, 237, 0.12);
-  border: 1px solid rgba(201, 184, 217, 0.35);
-  color: var(--color-ivory);
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-khaki);
+  color: var(--color-espresso);
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 700;
@@ -3137,45 +3200,63 @@ body {
 }
 
 .contact-chip:hover {
-  background: var(--color-ivory);
+  background: var(--color-linen);
   color: var(--color-burgundy);
-  border-color: var(--color-ivory);
+  border-color: var(--color-gold);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
 
 .highlight-chip {
-  background: var(--color-ivory);
-  color: var(--color-burgundy);
-  border-color: var(--color-ivory);
+  background: var(--color-burgundy);
+  color: #FFFFFF;
+  border-color: var(--color-burgundy);
 }
 
 .highlight-chip:hover {
-  background: #FFFFFF;
-  color: var(--color-burgundy);
+  background: var(--color-burgundy-dark);
+  color: #FFFFFF;
+  border-color: var(--color-burgundy-dark);
 }
 
 .chip-location {
   cursor: default;
-  background: rgba(250, 244, 237, 0.08);
+  background: #FFFFFF;
+  border-color: var(--color-khaki);
+  color: var(--color-espresso-muted);
 }
 
 .chip-location:hover {
-  background: rgba(250, 244, 237, 0.15);
-  color: var(--color-ivory);
+  background: #FFFFFF;
+  color: var(--color-espresso-muted);
+  border-color: var(--color-khaki);
   transform: none;
 }
 
-/* Centered Footer Bottom Row */
+/* ==========================================================================
+   SECTION 9: DEDICATED RESTRAINED GROUNDED FOOTER
+   Grounded in Deep Wine / Espresso with Ivory & Champagne Details
+   ========================================================================== */
+.footer-section {
+  background: var(--color-espresso-dark);
+  color: var(--color-linen);
+  padding: 44px 0 36px 0;
+  border-top: 1px solid rgba(201, 164, 109, 0.25);
+  position: relative;
+  z-index: 30;
+}
+
+.footer-botanical-sep {
+  margin-bottom: 20px;
+}
+
 .footer-bottom-row {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border-top: 1px solid rgba(201, 184, 217, 0.2);
-  padding-top: 36px;
-  gap: 20px;
+  gap: 18px;
 }
 
 @keyframes arrowBounce {
@@ -3191,9 +3272,9 @@ body {
   gap: 8px;
   padding: 10px 24px;
   border-radius: 9999px;
-  background: rgba(250, 244, 237, 0.12);
-  border: 1px solid rgba(201, 184, 217, 0.35);
-  color: var(--color-ivory);
+  background: rgba(201, 164, 109, 0.15);
+  border: 1px solid var(--color-gold);
+  color: #FAF7F2;
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
@@ -3204,27 +3285,29 @@ body {
 .back-to-top-btn i {
   animation: arrowBounce 1.8s infinite ease-in-out;
   transition: transform 0.2s ease;
+  color: var(--color-gold-light);
 }
 
 .back-to-top-btn:hover {
-  background: var(--color-ivory);
-  color: var(--color-burgundy);
+  background: var(--color-gold);
+  color: var(--color-espresso-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .back-to-top-btn:hover i {
   animation-play-state: paused;
   transform: translateY(-5px);
+  color: var(--color-espresso-dark);
 }
 
 .copyright-text {
   font-size: 0.88rem;
-  color: var(--color-lavender);
+  color: var(--color-gold-light);
 }
 
 .copyright-text strong {
-  color: var(--color-ivory);
+  color: #FFFFFF;
 }
 
 /* ==========================================================================
