@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elena Vance — Digital Marketing Professional | Strategy. Creativity. Growth.</title>
+  <meta name="description"
+    content="Elena Vance is a Digital Marketing Professional specializing in full-funnel acquisition, SEO strategy, audience engagement, conversion rate optimization, and growth analytics." />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-white-purple" id="top">
+
+  <!-- Transparent Navbar (Minimal, clean, and art-directed) -->
+  <header class="transparent-navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#top" class="brand-logo" id="brand-logo" aria-label="Elena Vance Portfolio Home">
+        <span class="logo-circle"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="logo-text">ELENA <span class="text-purple">VANCE</span></span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#methodology" class="nav-link">Methodology</a>
+        <a href="#projects" class="nav-link">Case Studies</a>
+        <a href="#about" class="nav-link">About</a>
+      </nav>
+
+      <div class="nav-right">
+        <!-- Quality Toggle Pill -->
+        <button class="quality-toggle-btn" id="quality-toggle-btn" type="button" title="Toggle 4K Master / Full HD resolution">
+          <i class="fa-solid fa-wand-magic-sparkles"></i>
+          <span id="quality-btn-label">Full HD (1080p)</span>
+        </button>
+
+        <a href="#contact-reach" class="btn-pill-dark" id="header-contact-btn">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars" id="menu-icon"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer">
+      <a href="#capabilities" class="mobile-nav-link">Capabilities</a>
+      <a href="#methodology" class="mobile-nav-link">Methodology</a>
+      <a href="#projects" class="mobile-nav-link">Case Studies</a>
+      <a href="#about" class="mobile-nav-link">About</a>
+      <a href="#contact-reach" class="mobile-nav-link mobile-contact-cta">Get in Touch</a>
+    </div>
+  </header>
+
+  <!-- Preloader Screen (Smooth fadeout once first frames are cached) -->
+  <div class="preloader-overlay" id="preloader">
+    <div class="preloader-content">
+      <div class="spinner-circle"></div>
+      <div class="preloader-text">Loading Cinematic Experience...</div>
+      <div class="preloader-progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="preloader-percentage" id="progress-text">0%</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SCROLL ANIMATION TRACK CONTAINER -->
+    <!-- Controlled 220vh depth for smooth, natural interactive scrubbing -->
+    <section class="scroll-animation-track" id="scroll-track">
+      <!-- Sticky Full-Screen Viewport -->
+      <div class="sticky-viewport" id="sticky-viewport">
+
+        <!-- Ambient Soft Lavender Aura Glow in background -->
+        <div class="ambient-glow glow-center"></div>
+
+        <!-- HTML5 Scroll Canvas: Centerpiece of Attraction -->
+        <canvas id="scroll-canvas" class="scroll-canvas"></canvas>
+
+        <!-- Signature Growth Signal SVG Motif -->
+        <svg class="growth-signal-svg" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="growthSignalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#321447" stop-opacity="0.05" />
+              <stop offset="25%" stop-color="#49245F" stop-opacity="0.4" />
+              <stop offset="65%" stop-color="#7e22ce" stop-opacity="0.85" />
+              <stop offset="90%" stop-color="#C9B8D9" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#321447" stop-opacity="0.1" />
+            </linearGradient>
+            <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="blur" />
+              <feComposite in="SourceGraphic" in2="blur" operator="over" />
+            </filter>
+          </defs>
+          <path id="growth-signal-path"
+            d="M -40,460 C 260,530 420,290 680,350 C 940,410 1140,210 1480,260"
+            fill="none" stroke="url(#growthSignalGradient)" stroke-width="2.5" stroke-linecap="round" />
+        </svg>
+
+        <!-- Growth Signal Pulse Nodes -->
+        <div class="growth-node node-1" id="node-1">
+          <div class="node-dot"></div>
+          <div class="node-label">Audience Intent</div>
+        </div>
+        <div class="growth-node node-2" id="node-2">
+          <div class="node-dot"></div>
+          <div class="node-label">Paid Search Scaling</div>
+        </div>
+        <div class="growth-node node-3" id="node-3">
+          <div class="node-dot"></div>
+          <div class="node-label">Conversion Optimization</div>
+        </div>
+
+        <!-- Hero Intro Overlay (Fades out gracefully as user begins scrolling) -->
+        <div class="hero-intro-overlay" id="hero-intro-overlay">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            <span>Elena Vance &bull; Strategic Growth Portfolio</span>
+          </div>
+          <h1 class="hero-main-title">
+            <span class="hero-title-sub">DIGITAL MARKETING</span>
+            <span class="hero-title-main">Strategy. Creativity. Growth.</span>
+          </h1>
+          <p class="hero-lead-text">
+            Bridging creative storytelling and performance marketing to build engaged audiences, drive organic search visibility, and engineer conversion-focused digital ecosystems.
+          </p>
+          <div class="hero-actions-row">
+            <a href="#projects" class="btn-primary-purple">
+              <span>View Case Studies</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#capabilities" class="btn-outline-charcoal">
+              <span>Core Capabilities</span>
+            </a>
+            <a href="#contact-reach" class="btn-subtle-link">
+              <span>Get in Touch</span>
+              <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+          <div class="hero-scroll-hint" id="hero-scroll-hint">
+            <div class="mouse-icon">
+              <div class="wheel-dot"></div>
+            </div>
+            <span>Scroll down to explore story</span>
+          </div>
+        </div>
+
+        <!-- Dynamic Overlay Narrative Milestones (Fade in sync with frame story) -->
+        <div class="narrative-overlay" id="narrative-overlay">
+          <!-- Milestone 1 (0% - 25% scroll) -->
+          <div class="milestone-card" id="milestone-1">
+            <span class="milestone-tag">Performance Marketing</span>
+            <h2 class="milestone-title">Data-Driven Growth & Acquisition</h2>
+            <p class="milestone-desc">Scaling brand visibility and customer acquisition through predictive analytics, targeted bidding, and high-ROI conversion funnels.</p>
+          </div>
+
+          <!-- Milestone 2 (25% - 50% scroll) -->
+          <div class="milestone-card" id="milestone-2">
+            <span class="milestone-tag">Real-Time Metrics</span>
+            <h2 class="milestone-title">Audience Engagement & Reach</h2>
+            <p class="milestone-desc">Orchestrating multi-channel paid and organic campaigns across Google Search, Meta, and high-intent social discovery.</p>
+          </div>
+
+          <!-- Milestone 3 (50% - 75% scroll) -->
+          <div class="milestone-card" id="milestone-3">
+            <span class="milestone-tag">Full-Funnel Strategy</span>
+            <h2 class="milestone-title">Conversion Rate Optimization</h2>
+            <p class="milestone-desc">Turning qualified traffic into sustained enterprise revenue through frictionless UX pathways and behavioral experimentation.</p>
+          </div>
+
+          <!-- Milestone 4 (75% - 100% scroll) -->
+          <div class="milestone-card milestone-final" id="milestone-4">
+            <span class="milestone-tag">Strategic Leadership</span>
+            <h2 class="milestone-title">Digital Marketing Professional</h2>
+            <p class="milestone-desc">Partnering with ambitious founders and growth teams to architect end-to-end digital marketing solutions.</p>
+            <div class="final-actions-row">
+              <a href="#projects" class="btn-pill-dark">
+                <span>Explore Case Studies</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+              <a href="#contact-reach" class="btn-pill-outline">
+                <i class="fa-regular fa-envelope"></i>
+                <span>Direct Inquiry</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Playback & Frame Indicator Pill (Bottom Center) -->
+        <div class="scroll-pill-indicator" id="scroll-pill" role="button" tabindex="0" title="Click to Reset Hero Animation">
+          <div class="playback-icon" id="playback-icon">
+            <i class="fa-solid fa-clapperboard" id="playback-icon-i"></i>
+          </div>
+          <span class="scroll-pill-text" id="scroll-status-text">Scroll to Scrub</span>
+          <div class="frame-counter-pill" id="frame-counter">001 / 240</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 1: CORE CAPABILITIES -->
+    <section class="section-container capabilities-section" id="capabilities">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag-badge">Core Capabilities</div>
+          <h2 class="section-main-heading">Integrated Growth & Brand Architecture</h2>
+          <p class="section-sub-heading">
+            Deploying multi-channel marketing strategies that balance immediate performance acquisition with enduring organic authority.
+          </p>
+        </div>
+
+        <div class="capabilities-grid">
+          <!-- Capability 1 -->
+          <div class="capability-card">
+            <div class="capability-card-header">
+              <span class="capability-num">01</span>
+              <div class="capability-icon"><i class="fa-solid fa-bullseye"></i></div>
+            </div>
+            <h3 class="capability-title">Full-Funnel Paid Acquisition</h3>
+            <p class="capability-desc">
+              Data-backed campaign architecture spanning Google Ads, Meta, and programmatic channels. Focused on intent targeting, creative variant testing, and scalable unit economics.
+            </p>
+            <div class="capability-tags">
+              <span>Google Ads</span>
+              <span>Meta Ads Manager</span>
+              <span>Audience Segmentation</span>
+              <span>Attribution Modeling</span>
+            </div>
+          </div>
+
+          <!-- Capability 2 -->
+          <div class="capability-card">
+            <div class="capability-card-header">
+              <span class="capability-num">02</span>
+              <div class="capability-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            </div>
+            <h3 class="capability-title">Organic Search Architecture (SEO)</h3>
+            <p class="capability-desc">
+              Building compounding organic visibility through topical cluster architecture, technical crawl optimization, keyword intent mapping, and authoritative editorial content.
+            </p>
+            <div class="capability-tags">
+              <span>Technical SEO</span>
+              <span>Topic Clusters</span>
+              <span>Search Console</span>
+              <span>Core Web Vitals</span>
+            </div>
+          </div>
+
+          <!-- Capability 3 -->
+          <div class="capability-card">
+            <div class="capability-card-header">
+              <span class="capability-num">03</span>
+              <div class="capability-icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+            </div>
+            <h3 class="capability-title">Conversion Rate Optimization (CRO)</h3>
+            <p class="capability-desc">
+              Transforming bounce rates into engaged conversions using behavioral heatmaps, session replay diagnostics, multivariate landing page testing, and frictionless form UX.
+            </p>
+            <div class="capability-tags">
+              <span>A/B Testing</span>
+              <span>Heatmap Diagnostics</span>
+              <span>Funnel Drop-off Audits</span>
+              <span>Landing Page UX</span>
+            </div>
+          </div>
+
+          <!-- Capability 4 -->
+          <div class="capability-card">
+            <div class="capability-card-header">
+              <span class="capability-num">04</span>
+              <div class="capability-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+            </div>
+            <h3 class="capability-title">Lifecycle & Retention Automation</h3>
+            <p class="capability-desc">
+              Maximizing customer lifetime value (LTV) through segmented email workflows, predictive nurture sequences, automated re-engagement triggers, and loyalty pathways.
+            </p>
+            <div class="capability-tags">
+              <span>Lifecycle Journeys</span>
+              <span>Klaviyo Automation</span>
+              <span>RFM Segmentation</span>
+              <span>Churn Prevention</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: THE GROWTH SIGNAL METHODOLOGY -->
+    <section class="section-container methodology-section" id="methodology">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag-badge">Strategic Framework</div>
+          <h2 class="section-main-heading">The 4-Stage Growth Methodology</h2>
+          <p class="section-sub-heading">
+            A structured, evidence-based operating system designed to de-risk marketing investments and systematically compound returns.
+          </p>
+        </div>
+
+        <div class="methodology-timeline">
+          <!-- Step 1 -->
+          <div class="method-step">
+            <div class="method-step-badge">Phase 01</div>
+            <div class="method-step-icon"><i class="fa-solid fa-fingerprint"></i></div>
+            <h3 class="method-step-title">Audit & Audience Intent Mapping</h3>
+            <p class="method-step-desc">
+              Deep evaluation of existing traffic quality, technical baseline, customer search queries, competitor positioning, and conversion friction points.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="method-step">
+            <div class="method-step-badge">Phase 02</div>
+            <div class="method-step-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <h3 class="method-step-title">Hypothesis & Funnel Architecture</h3>
+            <p class="method-step-desc">
+              Developing channel-specific hypotheses, mapping out customer touchpoints, structuring paid and organic keyword tiers, and designing high-intent landing pages.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="method-step">
+            <div class="method-step-badge">Phase 03</div>
+            <div class="method-step-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h3 class="method-step-title">Agile Multi-Channel Execution</h3>
+            <p class="method-step-desc">
+              Deploying creative variants across search and social, establishing live tracking protocols, running automated bidding tests, and executing targeted outreach.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="method-step">
+            <div class="method-step-badge">Phase 04</div>
+            <div class="method-step-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3 class="method-step-title">Attribution, Optimization & Scale</h3>
+            <p class="method-step-desc">
+              Synthesizing data through Looker Studio dashboards, eliminating low-performing ad sets, doubling down on high-LTV channels, and locking in compounding gains.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PROJECT SHOWCASE (PREMIUM CASE STUDIES) -->
+    <section class="section-container projects-section" id="projects">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag-badge">Selected Case Studies</div>
+          <h2 class="section-main-heading">Engineered Outcomes & Strategic Work</h2>
+          <p class="section-sub-heading">
+            In-depth case studies demonstrating end-to-end strategy, rigorous tactical execution, and authentic digital marketing methodologies.
+          </p>
+        </div>
+
+        <div class="case-studies-list">
+          <!-- Case Study 1 -->
+          <article class="case-study-card">
+            <div class="case-card-grid">
+              <div class="case-card-content">
+                <div class="case-meta-row">
+                  <span class="case-tag">Paid Media & Acquisition</span>
+                  <span class="case-duration">Full-Funnel Implementation</span>
+                </div>
+                <h3 class="case-title">Scalable Multi-Channel Acquisition Architecture</h3>
+                <p class="case-summary">
+                  Restructuring paid search and social channels to build a predictable, intent-driven customer acquisition pipeline across competitive digital marketplaces.
+                </p>
+
+                <div class="case-breakdown-grid">
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-crosshairs"></i> Objective</span>
+                    <p class="breakdown-text">Construct a sustainable customer acquisition engine across Google Search and Meta Ads without relying on high-churn discount incentives.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-compass"></i> Approach</span>
+                    <p class="breakdown-text">Segmented search terms into commercial intent tiers, designed a multi-variant creative testing matrix, and built predictive custom audiences.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-wrench"></i> Tool Stack</span>
+                    <p class="breakdown-text">Google Ads, Meta Ads Manager, GA4, Looker Studio, BigQuery.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-circle-check"></i> Strategic Outcome</span>
+                    <p class="breakdown-text">Established resilient unit economics, reduced customer acquisition cost variance, and delivered clean cross-channel attribution.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture Visual Mockup -->
+              <div class="case-card-visual">
+                <div class="visual-mockup-frame">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-title">acquisition_funnel_attribution.sys</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="mockup-stat-row">
+                      <div class="mockup-stat-box">
+                        <span class="stat-box-title">Intent Capture</span>
+                        <span class="stat-box-val text-purple">High-Intent</span>
+                        <div class="stat-bar"><div class="stat-bar-fill w-90"></div></div>
+                      </div>
+                      <div class="mockup-stat-box">
+                        <span class="stat-box-title">Blended CAC</span>
+                        <span class="stat-box-val text-success">Stabilized</span>
+                        <div class="stat-bar"><div class="stat-bar-fill w-75"></div></div>
+                      </div>
+                    </div>
+                    <div class="mockup-funnel-stages">
+                      <div class="funnel-step-bar f-step-1">
+                        <span>Top Funnel: Meta Prospecting & Brand Storytelling</span>
+                      </div>
+                      <div class="funnel-step-bar f-step-2">
+                        <span>Mid Funnel: Google Search Non-Brand Intent</span>
+                      </div>
+                      <div class="funnel-step-bar f-step-3">
+                        <span>Bottom Funnel: High-ROI Retargeting & Brand Search</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 2 -->
+          <article class="case-study-card">
+            <div class="case-card-grid">
+              <div class="case-card-content">
+                <div class="case-meta-row">
+                  <span class="case-tag">SEO Strategy & Content</span>
+                  <span class="case-duration">Organic Architecture</span>
+                </div>
+                <h3 class="case-title">Topical Cluster Engine & Organic Search Scaling</h3>
+                <p class="case-summary">
+                  Engineering an authoritative topical cluster ecosystem to transition from paid traffic dependency to compounding, high-intent organic search volume.
+                </p>
+
+                <div class="case-breakdown-grid">
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-crosshairs"></i> Objective</span>
+                    <p class="breakdown-text">Establish defensible organic search dominance and capture qualified inbound prospects through structured technical and editorial SEO.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-compass"></i> Approach</span>
+                    <p class="breakdown-text">Mapped topic cluster hubs, resolved crawl budget and Core Web Vitals bottlenecks, and deployed authoritative educational pillar content.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-wrench"></i> Tool Stack</span>
+                    <p class="breakdown-text">Semrush, Ahrefs, Screaming Frog, Google Search Console, Contentful.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-circle-check"></i> Strategic Outcome</span>
+                    <p class="breakdown-text">Sustained organic keyword expansion across competitive categories, increased qualified organic sessions, and reduced dependence on paid clicks.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture Visual Mockup -->
+              <div class="case-card-visual">
+                <div class="visual-mockup-frame">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-title">topical_cluster_graph.seo</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="cluster-nodes-visual">
+                      <div class="cluster-hub-node">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>Pillar Hub</span>
+                      </div>
+                      <div class="cluster-sub-nodes">
+                        <div class="sub-node"><span>Technical Intent</span></div>
+                        <div class="sub-node"><span>Commercial Guide</span></div>
+                        <div class="sub-node"><span>Solution Comparison</span></div>
+                      </div>
+                    </div>
+                    <div class="keyword-ranks-list">
+                      <div class="kw-row"><span class="kw-term">Strategic Funnel Analysis</span><span class="kw-badge">Top Tier</span></div>
+                      <div class="kw-row"><span class="kw-term">Full-Funnel Acquisition</span><span class="kw-badge">Top Tier</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 3 -->
+          <article class="case-study-card">
+            <div class="case-card-grid">
+              <div class="case-card-content">
+                <div class="case-meta-row">
+                  <span class="case-tag">CRO & Funnel UX</span>
+                  <span class="case-duration">Behavioral Diagnostics</span>
+                </div>
+                <h3 class="case-title">Conversion Rate Optimization & Funnel UX Diagnostics</h3>
+                <p class="case-summary">
+                  Systematically identifying customer hesitation and friction on high-intent conversion pathways to maximize yield on existing website traffic.
+                </p>
+
+                <div class="case-breakdown-grid">
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-crosshairs"></i> Objective</span>
+                    <p class="breakdown-text">Eliminate mobile and desktop conversion drop-off on lead generation landing pages and increase form completion efficiency.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-compass"></i> Approach</span>
+                    <p class="breakdown-text">Analyzed scroll heatmaps and session drop-offs, condensed multistep form requirements, and ran controlled multivariate A/B tests.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-wrench"></i> Tool Stack</span>
+                    <p class="breakdown-text">Hotjar, VWO, Figma, PostHog, Google Analytics.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-circle-check"></i> Strategic Outcome</span>
+                    <p class="breakdown-text">Measurably reduced landing page drop-off rate, increased mobile form completion velocity, and maximized traffic ROI.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture Visual Mockup -->
+              <div class="case-card-visual">
+                <div class="visual-mockup-frame">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-title">ab_test_diagnostics.cro</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="ab-comparison-grid">
+                      <div class="ab-card ab-control">
+                        <span class="ab-label">Variant A (Baseline)</span>
+                        <span class="ab-metric">Multi-Step Form</span>
+                        <div class="ab-bar"><div class="ab-bar-fill w-50"></div></div>
+                      </div>
+                      <div class="ab-card ab-winner">
+                        <span class="ab-label">Variant B (Optimized)</span>
+                        <span class="ab-metric text-purple">Frictionless UX</span>
+                        <div class="ab-bar"><div class="ab-bar-fill w-85"></div></div>
+                      </div>
+                    </div>
+                    <div class="cro-signal-badge">
+                      <i class="fa-solid fa-bolt"></i>
+                      <span>High Statistical Confidence Achieved</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Case Study 4 -->
+          <article class="case-study-card">
+            <div class="case-card-grid">
+              <div class="case-card-content">
+                <div class="case-meta-row">
+                  <span class="case-tag">Lifecycle & Retention</span>
+                  <span class="case-duration">Automated Messaging</span>
+                </div>
+                <h3 class="case-title">Automated Lifecycle Marketing & Cohort Retention</h3>
+                <p class="case-summary">
+                  Engineering dynamic email and SMS customer lifecycle journeys to maximize repeat purchase cadence and prevent audience churn.
+                </p>
+
+                <div class="case-breakdown-grid">
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-crosshairs"></i> Objective</span>
+                    <p class="breakdown-text">Increase customer lifetime value (LTV) and establish automated repeat engagement cycles across distinct customer segments.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-compass"></i> Approach</span>
+                    <p class="breakdown-text">Built dynamic RFM cohorts, designed automated replenishment and onboarding journeys, and established dedicated win-back sequences.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-wrench"></i> Tool Stack</span>
+                    <p class="breakdown-text">Klaviyo, Customer.io, Segment, Zapier.</p>
+                  </div>
+                  <div class="case-breakdown-item">
+                    <span class="breakdown-label"><i class="fa-solid fa-circle-check"></i> Strategic Outcome</span>
+                    <p class="breakdown-text">Automated repeat engagement cycles, protected deliverability sender score, and unlocked consistent recurring audience value.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture Visual Mockup -->
+              <div class="case-card-visual">
+                <div class="visual-mockup-frame">
+                  <div class="mockup-header">
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-dot"></span>
+                    <span class="mockup-title">lifecycle_rfm_matrix.crm</span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="lifecycle-nodes-flow">
+                      <div class="rfm-flow-node">
+                        <span class="rfm-step">Step 1</span>
+                        <span class="rfm-name">Welcome Series</span>
+                      </div>
+                      <div class="rfm-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                      <div class="rfm-flow-node">
+                        <span class="rfm-step">Step 2</span>
+                        <span class="rfm-name">Predictive Nurture</span>
+                      </div>
+                      <div class="rfm-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                      <div class="rfm-flow-node active">
+                        <span class="rfm-step">Step 3</span>
+                        <span class="rfm-name">Retention Loop</span>
+                      </div>
+                    </div>
+                    <div class="rfm-cohort-status">
+                      <span>Automated Deliverability Health: 99.4%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: STRATEGIC GROWTH PHILOSOPHY & ABOUT -->
+    <section class="section-container about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-info-col">
+            <div class="section-tag-badge">Strategic Philosophy</div>
+            <h2 class="about-title">Growth is not accidental.<br><span class="text-purple">It is engineered.</span></h2>
+            <p class="about-desc">
+              I am Elena Vance, a Digital Marketing Professional and Growth Strategist. I specialize in designing scalable marketing engines that connect brand positioning directly with verifiable business revenue.
+            </p>
+            <p class="about-desc">
+              Rather than chasing fleeting vanity metrics, my focus centers on unit economics, audience intent segmentation, topical search authority, and high-converting customer experiences.
+            </p>
+
+            <div class="about-credentials-row">
+              <div class="cred-chip">
+                <i class="fa-solid fa-award"></i>
+                <span>Google Marketing Platform Certified</span>
+              </div>
+              <div class="cred-chip">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Meta Certified Media Buying Professional</span>
+              </div>
+              <div class="cred-chip">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span>Semrush Certified SEO Strategist</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-tools-col">
+            <div class="tools-card">
+              <h3 class="tools-title">Professional Marketing Stack</h3>
+              <p class="tools-subtitle">Industry-standard analytics, acquisition, and optimization toolsets utilized in daily client engagements.</p>
+              <div class="tools-pills-wrap">
+                <span class="tool-pill"><i class="fa-brands fa-google"></i> Google Ads</span>
+                <span class="tool-pill"><i class="fa-brands fa-meta"></i> Meta Ads Manager</span>
+                <span class="tool-pill"><i class="fa-solid fa-chart-pie"></i> Google Analytics 4 (GA4)</span>
+                <span class="tool-pill"><i class="fa-solid fa-table-columns"></i> Looker Studio</span>
+                <span class="tool-pill"><i class="fa-solid fa-magnifying-glass"></i> Semrush</span>
+                <span class="tool-pill"><i class="fa-solid fa-spider"></i> Screaming Frog SEO</span>
+                <span class="tool-pill"><i class="fa-solid fa-fire"></i> Hotjar</span>
+                <span class="tool-pill"><i class="fa-solid fa-envelope"></i> Klaviyo</span>
+                <span class="tool-pill"><i class="fa-brands fa-figma"></i> Figma Funnel UX</span>
+                <span class="tool-pill"><i class="fa-solid fa-bolt"></i> Zapier & Webhooks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: MINIMAL FINAL REACH / CONTACT SECTION -->
+    <section class="minimal-footer-section" id="contact-reach">
+      <div class="container text-center">
+        <div class="section-tag-badge">Get in Touch</div>
+        <h2 class="footer-title">Ready To Accelerate Your Growth?</h2>
+        <p class="footer-subtitle">
+          Reach out directly for consulting, executive growth leadership, strategic channel audits, or full-funnel advisory engagements.
+        </p>
+
+        <!-- Direct Inquiry Form -->
+        <div class="contact-form-wrapper">
+          <form class="strategic-contact-form" id="strategic-contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Sarah Jenkins" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Work Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. sarah@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-service" class="form-label">Strategic Focus Area</label>
+                <select id="contact-service" class="form-input form-select">
+                  <option value="Full-Funnel Paid Acquisition">Full-Funnel Paid Acquisition</option>
+                  <option value="SEO Strategy & Content Architecture">SEO Strategy & Content Architecture</option>
+                  <option value="Conversion Rate Optimization (CRO)">Conversion Rate Optimization (CRO)</option>
+                  <option value="Lifecycle & Retention Automation">Lifecycle & Retention Automation</option>
+                  <option value="Comprehensive Growth Audit">Comprehensive Growth Audit</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Project Objectives & Timeline</label>
+              <textarea id="contact-message" class="form-input form-textarea" rows="3" placeholder="Briefly describe your growth objectives and current challenges..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit-inquiry" id="submit-inquiry-btn">
+              <span>Send Strategic Inquiry</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+            <div class="form-status-msg" id="form-status-msg"></div>
+          </form>
+        </div>
+
+        <!-- Contact Links Pills -->
+        <div class="contact-links-pills">
+          <a href="mailto:elena@marketingpro.com" class="contact-chip" id="copy-email-chip" title="Click to email Elena">
+            <i class="fa-regular fa-envelope"></i>
+            <span>elena@marketingpro.com</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-chip" aria-label="Elena Vance on LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-chip" aria-label="Elena Vance on X">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X / Twitter</span>
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="contact-chip" aria-label="Elena Vance on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="footer-bottom-row">
+          <div class="copyright-text">
+            &copy; <span id="current-year">2026</span> Elena Vance &bull; Digital Marketing Professional &bull; Strategy. Creativity. Growth.
+          </div>
+          <a href="#top" class="back-to-top-btn" title="Back to top">
+            <span>Back to Top</span>
+            <i class="fa-solid fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

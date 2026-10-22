@@ -7,7 +7,7 @@
  *   • Synchronized cinematic zoom (1.00x → 1.08x)
  *   • Subtle pointer parallax on ambient background
  *   • Signature Growth Signal SVG drawing path synced to progress
- *   • Automatic adaptive resolution tier detection (4K Master / Standard WebP)
+ *   • Automatic high-fidelity device asset resolution
  *   • Natural page scroll handoff (zero scroll-hijacking)
  *   • Narrative milestone card reveals
  *   • Mobile drawer navigation & strategic contact form handling
@@ -45,12 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if (yearElem) yearElem.textContent = new Date().getFullYear();
 
   // ==========================================================================
-  // 1. RESPONSIVE QUALITY TIER SELECTION
+  // 1. RESPONSIVE QUALITY TIER SELECTION (AUTOMATIC & SILENT)
   // ==========================================================================
   function detectInitialQualityTier() {
-    const saved = localStorage.getItem('sakina_portfolio_quality');
-    if (saved === '4k' || saved === 'fhd') return saved;
-
     const dpr = window.devicePixelRatio || 1;
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const screenPixels = Math.max(window.screen.width, window.screen.height) * dpr;
@@ -249,8 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     hidePreloader();
   }
-
-  // Automatic Quality Tier Selection (4K for Ultra-HD screens, FHD for Standard/Mobile)
 
   // ==========================================================================
   // 6. SCROLL PROGRESS ENGINE & MOTION SYNCHRONIZATION
@@ -536,22 +531,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ==========================================================================
-  // 13. INTERACTIVE 3D BOOK HOVER PERSPECTIVE
+  // 13. INTERACTIVE 3D BOOK HOVER PERSPECTIVE (Controlled & Subtle)
   // ==========================================================================
   const bookStage = document.getElementById('book-3d-stage');
   const bookCard = document.getElementById('book-3d-card');
   if (bookStage && bookCard) {
+    let rafId = null;
+
     bookStage.addEventListener('mousemove', (e) => {
-      const rect = bookStage.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width - 0.5;
-      const y = (e.clientY - rect.top) / rect.height - 0.5;
-      const rotateY = -18 + x * 26;
-      const rotateX = 10 - y * 20;
-      bookCard.style.transform = `rotateY(${rotateY.toFixed(1)}deg) rotateX(${rotateX.toFixed(1)}deg) scale(1.03)`;
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        const rect = bookStage.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
+        const y = (e.clientY - rect.top) / rect.height - 0.5; // -0.5 to 0.5
+        // Subtle, controlled tilt: resting at -12deg Y / 4deg X
+        const rotateY = -12 + x * 12; // ranges between -18deg and -6deg
+        const rotateX = 4 - y * 8;   // ranges between 0deg and 8deg
+        bookCard.style.transform = `rotateY(${rotateY.toFixed(1)}deg) rotateX(${rotateX.toFixed(1)}deg) scale(1.02)`;
+      });
     });
 
     bookStage.addEventListener('mouseleave', () => {
-      bookCard.style.transform = 'rotateY(-18deg) rotateX(10deg) scale(1)';
+      if (rafId) cancelAnimationFrame(rafId);
+      bookCard.style.transform = 'rotateY(-12deg) rotateX(4deg) scale(1)';
     });
   }
 

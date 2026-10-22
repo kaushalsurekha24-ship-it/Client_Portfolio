@@ -1,82 +1,100 @@
 /* ==========================================================================
-   SAKINA MURTAZA SAIFEE — DIGITAL MARKETING EXPERT & CREATIVE PROFESSIONAL
-   Official Botanical Luxury Editorial Portfolio & Selected Work Showcase
+   SAKINA MURTAZA SAIFEE — DIGITAL MARKETING EXPERT & CREATIVE DIRECTION
+   Premium Editorial Portfolio & 3D Interactive Author Showcase
    ──────────────────────────────────────────────────────────────────────────
-   COHESIVE LUXURY BOTANICAL PALETTE:
-     • Linen / Warm Background:   #F5F1EA (55–65% Dominant Surface)
-     • Soft White:                #FFFFFF (Pristine Cards & Surface Plagues)
-     • Khaki Beige:               #D7C9B8 (15–20% Secondary Warm Neutral)
-     • Camel:                     #B2967D (Restrained Warm Accent)
-     • Cocoa:                     #7D5A44 (Rich Cocoa Elements & Subtle Borders)
-     • Espresso:                  #4A342A (Headings, Content & Structural Contrast)
-     • Burgundy:                  #8B1E2D (Selective Headings & Primary Actions Only)
-     • Deep Wine:                 #5B0F1A (Grounded Final Footer & Accents)
-     • Antique Gold:              #C9A46D (Fine Botanical Line-Art, Icons & Lines)
-     • Soft Champagne Gold:       #D9BD87 (Gentle Glows & Secondary Botanical Highlights)
-     • Classic Lavender:          #C9B8D9 (Preserved Heritage Brand Accent)
-     • Deep Purple:               #321447 (Original Identity Depth Accent)
-     • Rich Plum:                 #49245F (Original Identity Depth Accent)
-     • Readable Neutral Text:     #35272A (Accessible Dark Neutral Text)
+   PREMIUM CLASSIC COLOR SYSTEM (EXACT TOKENS):
+     • PORCELAIN IVORY:       #F7F5F0 (Dominant Fresh Canvas)
+     • SOFT WHITE:            #FFFFFF (Crisp Editorial Card Surfaces)
+     • CHAMPAGNE BEIGE:       #E7D5C6 (Warm Architectural Neutral)
+     • WARM CAMEL:            #B2967D (Restrained Warm Accent)
+     • COCOA:                 #7D5A44 (Rich Cocoa Details & Subtle Borders)
+     • ESPRESSO:              #4A342A (Headings, Content & Structural Contrast)
+     • BURGUNDY:              #7A2838 (Selective Strategic Emphasis)
+     • DEEP WINE:             #5B0F1A (Grounded Accents & Depth)
+     • ANTIQUE GOLD:          #C5A268 (Botanical SVG Line-Art & Refined Emblems)
+     • SOFT CHAMPAGNE GOLD:   #D9BD87 (Soft Glows & Subtitle Accents)
+     • DUSTY LAVENDER:        #D8CDE6 (Subtle Tinted Cards & Surface Highlights)
+     • ORIGINAL LAVENDER:     #C9B8D9 (Preserved Heritage Brand Accent)
+     • DEEP PLUM:             #392348 (Original Depth Identity & Primary Actions)
+     • ORIGINAL DEEP PURPLE:  #321447 (Signature Identity Grounding)
+     • SAGE GREEN:            #A8B5A0 (Fresh Organic Contrast & Metric Accents)
+     • MUTED TEAL:            #527C78 (Creative Accent for Content & Strategy)
+     • GRAPHITE:              #302B31 (Crisp Readable Neutral Typography)
 
    TYPOGRAPHY SYSTEM:
-     • Editorial Serif:           'Cormorant Garamond', 'Playfair Display', Georgia, serif
-     • Clean Modern Sans:         'Manrope', 'DM Sans', -apple-system, sans-serif
-     • Body Sans:                 'DM Sans', 'Manrope', sans-serif
+     • Editorial Display:     'Cormorant Garamond', 'Playfair Display', Georgia, serif
+     • Modern Clean Sans:     'Manrope', 'DM Sans', -apple-system, sans-serif
+     • Body Sans:             'DM Sans', 'Manrope', -apple-system, sans-serif
    ========================================================================== */
 
 :root {
-  /* ── 1. Botanical Luxury Color Tokens (Exact Specifications) ── */
-  --color-linen:               #F5F1EA;
-  --color-white:               #FFFFFF;
-  --color-khaki:               #D7C9B8;
-  --color-camel:               #B2967D;
-  --color-cocoa:               #7D5A44;
-  --color-espresso:            #4A342A;
-  --color-espresso-muted:      #5C453B;
-  --color-espresso-dark:       #2A1C16;
-  --color-text-neutral:        #35272A;
+  /* ── 1. The 18 Curated Color Tokens (Exact User Specifications) ── */
+  --color-porcelain:           #F7F5F0; /* Porcelain Ivory (Dominant Fresh Canvas) */
+  --color-white:               #FFFFFF; /* Clean White (Crisp Editorial Card Surfaces) */
+  --color-blush:               #F1E5E2; /* Soft Blush (Subtle card tints & tags) */
+  --color-champagne-beige:     #E7D5C6; /* Champagne Beige (Warm architectural neutral) */
+  --color-camel:               #B2967D; /* Warm Camel (Restrained warm accent) */
+  --color-cocoa:               #7D5A44; /* Cocoa (Rich cocoa details & borders) */
+  --color-espresso:            #35272A; /* Espresso (Headings, primary typography & deep contrast) */
+  --color-espresso-muted:      #5E484A; /* Muted espresso for readable secondary body */
+  --color-espresso-dark:       #24191C; /* Deepest espresso grounding */
+  --color-burgundy:            #7A2838; /* Burgundy (Selective dramatic focal points & primary CTAs) */
+  --color-burgundy-dark:       #5C1A25; /* Deeper burgundy shade */
+  --color-burgundy-rich:       #8F3042; /* Lighter burgundy highlight */
+  --color-burgundy-wash:       rgba(122, 40, 56, 0.08);
+  --color-burgundy-border:     rgba(122, 40, 56, 0.22);
+  --color-wine:                #5B0F1A; /* Deep Wine (Grounded accents, depth & footer gradient) */
 
-  --color-burgundy:            #8B1E2D;
-  --color-burgundy-dark:       #6E1421;
-  --color-burgundy-rich:       #A32637;
-  --color-burgundy-wash:       rgba(139, 30, 45, 0.08);
-  --color-burgundy-border:     rgba(139, 30, 45, 0.22);
-  --color-wine:                #5B0F1A;
+  --color-gold:                #C5A268; /* Antique Champagne Gold (Botanical SVG Line-Art & Refined Emblems) */
+  --color-gold-light:          #D9BD87; /* Soft Champagne Gold (Subtle glows, icons & badges) */
+  --color-gold-wash:           rgba(197, 162, 104, 0.12);
+  --color-gold-border:         rgba(197, 162, 104, 0.38);
 
-  --color-gold:                #C9A46D;
-  --color-gold-light:          #D9BD87;
-  --color-gold-wash:           rgba(201, 164, 109, 0.12);
-  --color-gold-border:         rgba(201, 164, 109, 0.38);
-
+  --color-dusty-lavender:      #C9B8D9; /* Dusty Lavender (Preserved heritage brand accent) */
+  --color-pale-lavender:       #D8CDE6; /* Pale Lavender (Subtle tinted cards & surface highlights) */
   --color-lavender:            #C9B8D9;
-  --color-lavender-soft:       #F2ECF7;
-  --color-lavender-wash:       rgba(201, 184, 217, 0.20);
-  --color-lavender-border:     rgba(201, 184, 217, 0.50);
-  --color-purple:              #321447;
-  --color-plum:                #49245F;
+  --color-lavender-soft:       #F5F0FA;
+  --color-lavender-wash:       rgba(201, 184, 217, 0.22);
+  --color-lavender-border:     rgba(201, 184, 217, 0.45);
 
-  --color-dusty-rose:          #C8A8A0;
-  --color-rose-wash:           rgba(200, 168, 160, 0.18);
-  --color-rose-border:         rgba(200, 168, 160, 0.45);
-  --color-mauve:               var(--color-cocoa);
+  --color-purple:              #321447; /* Deep Purple (Signature identity grounding & hero overlay) */
+  --color-plum:                #49245F; /* Rich Plum (Original depth identity & primary actions) */
+  --color-purple-dark:         #1F1025;
 
-  /* Semantic Aliases for Uniform Architecture */
-  --color-ivory:               var(--color-linen);
+  --color-sage:                #A8B5A0; /* Muted Sage Green (Fresh organic contrast & metric accents) */
+  --color-sage-deep:           #59664E; /* Deep Sage (Sophisticated editorial grounding & foliage accents) */
+  --color-sage-soft:           #F2F6F0;
+  --color-sage-wash:           rgba(168, 181, 160, 0.18);
+  --color-sage-border:         rgba(168, 181, 160, 0.40);
+
+  --color-teal:                #527C78;
+  --color-teal-soft:           #EDF4F3;
+  --color-teal-wash:           rgba(82, 124, 120, 0.15);
+  --color-teal-border:         rgba(82, 124, 120, 0.35);
+
+  --color-graphite:            #302B31; /* Graphite (Crisp readable neutral typography) */
+  --color-graphite-muted:      #5E5661;
+  --color-text-neutral:        #302B31;
+
+  /* ── 2. Unified Architectural Semantic Aliases ── */
+  --color-ivory:               var(--color-porcelain);
+  --color-linen:               var(--color-porcelain);
   --color-ivory-soft:          #FAF7F2;
-  --color-beige:               var(--color-khaki);
-  --color-beige-light:         #EFE8E0;
-  --color-beige-border:        #CFBFAF;
-  --color-beige-wash:          rgba(215, 201, 184, 0.35);
+  --color-beige:               var(--color-champagne-beige);
+  --color-khaki:               var(--color-champagne-beige);
+  --color-beige-light:         #FBF7F2;
+  --color-beige-border:        rgba(231, 213, 198, 0.85);
+  --color-beige-wash:          rgba(231, 213, 198, 0.30);
 
-  --ivory-primary:             var(--color-linen);
-  --beige-warm:                var(--color-khaki);
-  --beige-light:               #EFE8E0;
+  --ivory-primary:             var(--color-porcelain);
+  --beige-warm:                var(--color-champagne-beige);
+  --beige-light:               #FBF7F2;
   --lavender-soft:             var(--color-lavender-soft);
   --lavender-muted:            var(--color-lavender);
-  --mauve-dusty:               var(--color-cocoa);
-  --plum-deep:                 var(--color-espresso); /* KEY FIX: stops rogue maroon propagation */
-  --aubergine-rich:            var(--color-cocoa);
-  --charcoal-dark:             var(--color-espresso-dark);
+  --mauve-dusty:               var(--color-dusty-lavender);
+  --plum-deep:                 var(--color-plum);
+  --aubergine-rich:            var(--color-purple);
+  --charcoal-dark:             var(--color-graphite);
   --white-soft:                var(--color-white);
 
   /* Authentic Client Project Brand Accents */
@@ -87,24 +105,25 @@
   --green-ojus:                #166534;
   --green-bg-ojus:             rgba(22, 101, 52, 0.08);
 
-  /* ── 2. Editorial Typography ── */
+  /* ── 3. Editorial Typography ── */
   --font-serif:                'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-display:              'Playfair Display', 'Cormorant Garamond', Georgia, serif;
   --font-heading:              'Manrope', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body:                 'DM Sans', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-editorial:            var(--font-serif);
 
-  /* ── 3. Elevation & Animation Curves ── */
+  /* ── 4. Elevation & Animation Curves ── */
   --ease-cinematic:            cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast:           0.22s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth:         0.38s var(--ease-cinematic);
   --transition-card:           0.45s var(--ease-cinematic);
 
-  --shadow-subtle:             0 4px 20px rgba(74, 52, 42, 0.04);
-  --shadow-card:               0 10px 30px rgba(74, 52, 42, 0.07);
-  --shadow-hover:              0 18px 45px rgba(125, 90, 68, 0.14);
-  --shadow-burgundy:           0 8px 24px rgba(139, 30, 45, 0.26);
-  --shadow-dark:               0 20px 48px rgba(42, 28, 22, 0.35);
+  --shadow-subtle:             0 4px 20px rgba(48, 43, 49, 0.04);
+  --shadow-card:               0 10px 30px rgba(48, 43, 49, 0.06);
+  --shadow-hover:              0 18px 45px rgba(57, 35, 72, 0.12);
+  --shadow-plum:               0 8px 24px rgba(57, 35, 72, 0.25);
+  --shadow-burgundy:           0 8px 24px rgba(122, 40, 56, 0.25);
+  --shadow-dark:               0 20px 48px rgba(31, 16, 37, 0.35);
 }
 
 /* ==========================================================================
@@ -416,7 +435,7 @@ body {
   background: var(--color-burgundy-dark);
   color: #FFFFFF;
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(139, 30, 45, 0.36);
+  box-shadow: 0 10px 28px rgba(122, 40, 56, 0.36);
 }
 
 .btn-pill-plum:hover i {
@@ -505,7 +524,7 @@ body {
   color: var(--color-espresso);
   text-decoration: none;
   padding: 8px 0;
-  border-bottom: 1px solid rgba(90, 32, 45, 0.08);
+  border-bottom: 1px solid rgba(50, 20, 71, 0.08);
   transition: color var(--transition-fast);
 }
 
@@ -557,7 +576,7 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 3.5px solid rgba(90, 32, 45, 0.12);
+  border: 3.5px solid rgba(50, 20, 71, 0.12);
   border-top-color: var(--color-burgundy);
   animation: spin 0.8s linear infinite;
 }
@@ -576,7 +595,7 @@ body {
 .preloader-progress-bar {
   width: 100%;
   height: 6px;
-  background: rgba(90, 32, 45, 0.08);
+  background: rgba(50, 20, 71, 0.08);
   border-radius: 9999px;
   overflow: hidden;
 }
@@ -1025,7 +1044,7 @@ body {
 .scroll-pill-indicator:hover {
   transform: translateX(-50%) translateY(-2px);
   border-color: var(--color-burgundy);
-  box-shadow: 0 12px 30px rgba(90, 32, 45, 0.15);
+  box-shadow: 0 12px 30px rgba(50, 20, 71, 0.15);
 }
 
 .playback-icon {
@@ -1048,8 +1067,8 @@ body {
    SECTION 1: ABOUT SAKINA (PEARL IVORY BACKGROUND)
    ========================================================================== */
 .about-section {
-  background: var(--color-ivory);
-  border-top: 1px solid var(--color-beige);
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-beige-border);
 }
 
 .about-grid {
@@ -1083,8 +1102,8 @@ body {
 }
 
 .strength-item {
-  background: #FFFFFF;
-  border: 1px solid var(--color-beige);
+  background: var(--color-porcelain);
+  border: 1px solid var(--color-beige-border);
   border-radius: 18px;
   padding: 22px 20px;
   display: flex;
@@ -1096,7 +1115,7 @@ body {
 
 .strength-item:hover {
   transform: translateY(-4px);
-  border-color: var(--color-dusty-rose);
+  border-color: var(--color-lavender);
   box-shadow: var(--shadow-card);
 }
 
@@ -1105,13 +1124,35 @@ body {
   height: 44px;
   flex-shrink: 0;
   border-radius: 12px;
-  background: var(--color-burgundy);
-  color: #FFFFFF;
+  background: var(--color-lavender-soft);
+  color: var(--color-purple);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.15rem;
-  box-shadow: 0 4px 12px rgba(90, 32, 45, 0.22);
+  box-shadow: 0 4px 12px rgba(50, 20, 71, 0.12);
+  transition: all var(--transition-fast);
+}
+
+.strength-item:nth-child(1) .strength-icon {
+  background: var(--color-lavender-soft);
+  color: var(--color-purple);
+}
+.strength-item:nth-child(2) .strength-icon {
+  background: var(--color-sage-soft);
+  color: var(--color-sage-deep);
+}
+.strength-item:nth-child(3) .strength-icon {
+  background: var(--color-gold-wash);
+  color: var(--color-gold);
+}
+.strength-item:nth-child(4) .strength-icon {
+  background: var(--color-burgundy-wash);
+  color: var(--color-burgundy);
+}
+
+.strength-item:hover .strength-icon {
+  transform: scale(1.08);
 }
 
 .strength-title {
@@ -1135,25 +1176,26 @@ body {
 }
 
 .about-quote-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-beige);
-  border-left: 4.5px solid var(--color-burgundy);
-  border-radius: 20px;
+  background: linear-gradient(145deg, #2D1438 0%, #1F0D27 100%);
+  border: 1.5px solid rgba(197, 162, 104, 0.35);
+  border-left: 5px solid var(--color-gold);
+  border-radius: 22px;
   padding: 34px 30px;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 16px 40px rgba(50, 20, 71, 0.22);
+  color: #FFFFFF;
 }
 
-.quote-icon {
-  color: var(--color-gold);
+.about-quote-card .quote-icon {
+  color: var(--color-gold-light);
   font-size: 1.8rem;
   margin-bottom: 12px;
 }
 
-.quote-text {
+.about-quote-card .quote-text {
   font-family: var(--font-serif);
   font-size: 1.18rem;
   line-height: 1.7;
-  color: var(--color-espresso);
+  color: #F7F5F0;
   font-style: italic;
   margin-bottom: 18px;
 }
@@ -1163,21 +1205,21 @@ body {
   flex-direction: column;
 }
 
-.author-name {
+.about-quote-card .author-name {
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
   font-weight: 800;
-  color: var(--color-burgundy);
+  color: var(--color-gold-light);
 }
 
-.author-title {
+.about-quote-card .author-title {
   font-size: 0.84rem;
-  color: var(--color-espresso-muted);
+  color: var(--color-dusty-lavender);
 }
 
 .verified-passions-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-beige);
+  background: var(--color-porcelain);
+  border: 1px solid var(--color-beige-border);
   border-radius: 20px;
   padding: 26px 28px;
   box-shadow: var(--shadow-subtle);
@@ -1201,8 +1243,8 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: #FFFFFF;
+  border: 1px solid var(--color-beige-border);
   color: var(--color-espresso);
   font-family: var(--font-heading);
   font-size: 0.82rem;
@@ -1213,14 +1255,14 @@ body {
 }
 
 .passion-pill i {
-  color: var(--color-burgundy);
+  color: var(--color-plum);
   font-size: 0.78rem;
 }
 
 .passion-pill:hover {
   background: var(--color-lavender-soft);
   border-color: var(--color-lavender);
-  color: var(--color-burgundy);
+  color: var(--color-purple);
   transform: translateY(-2px);
 }
 
@@ -1228,8 +1270,8 @@ body {
    SECTION 2: SERVICES (CHAMPAGNE BEIGE ALTERNATING BACKGROUND)
    ========================================================================== */
 .services-section {
-  background: var(--color-beige-light);
-  border-top: 1px solid var(--color-beige);
+  background: var(--color-porcelain);
+  border-top: 1px solid var(--color-beige-border);
 }
 
 .services-grid {
@@ -1240,7 +1282,7 @@ body {
 
 .service-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 24px;
   padding: 34px 28px;
   display: flex;
@@ -1258,7 +1300,7 @@ body {
   left: -100%;
   width: 100%;
   height: 3.5px;
-  background: linear-gradient(90deg, transparent, var(--color-burgundy), var(--color-gold), transparent);
+  background: linear-gradient(90deg, transparent, var(--color-gold), var(--color-lavender), transparent);
   transition: left 0.65s ease;
 }
 
@@ -1268,8 +1310,8 @@ body {
 
 .service-card:hover {
   transform: translateY(-8px);
-  border-color: var(--color-gold);
-  box-shadow: 0 16px 45px rgba(74, 52, 42, 0.12);
+  border-color: var(--color-lavender);
+  box-shadow: 0 16px 45px rgba(57, 35, 72, 0.10);
 }
 
 .service-card-header {
@@ -1292,18 +1334,25 @@ body {
   height: 48px;
   border-radius: 14px;
   background: var(--color-lavender-soft);
-  color: var(--color-cocoa);
+  color: var(--color-purple);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 4px 12px rgba(74, 52, 42, 0.08);
+  box-shadow: 0 4px 12px rgba(50, 20, 71, 0.08);
   transition: transform 0.35s ease, background 0.35s ease, color 0.35s ease;
 }
 
+.service-card:nth-child(1) .service-icon { background: var(--color-lavender-soft); color: var(--color-purple); }
+.service-card:nth-child(2) .service-icon { background: var(--color-sage-soft); color: var(--color-sage-deep); }
+.service-card:nth-child(3) .service-icon { background: var(--color-burgundy-wash); color: var(--color-burgundy); }
+.service-card:nth-child(4) .service-icon { background: var(--color-lavender-soft); color: var(--color-plum); }
+.service-card:nth-child(5) .service-icon { background: var(--color-blush); color: var(--color-cocoa); }
+.service-card:nth-child(6) .service-icon { background: var(--color-gold-wash); color: var(--color-gold); }
+
 .service-card:hover .service-icon {
   transform: scale(1.12) rotate(4deg);
-  background: var(--color-burgundy);
+  background: var(--color-purple);
   color: #FFFFFF;
 }
 
@@ -1329,7 +1378,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  border-top: 1px solid var(--color-beige);
+  border-top: 1px solid var(--color-beige-border);
   padding-top: 18px;
 }
 
@@ -1347,12 +1396,54 @@ body {
   font-size: 0.85rem;
 }
 
+/* Distinctive Dark & Lavender Card Variations */
+.service-card:nth-child(1) {
+  background: linear-gradient(145deg, #2D1438 0%, #1F0C26 100%);
+  border: 1.5px solid rgba(197, 162, 104, 0.45);
+  box-shadow: 0 16px 40px rgba(45, 20, 56, 0.25);
+}
+
+.service-card:nth-child(1) .service-num {
+  color: var(--color-gold-light);
+}
+
+.service-card:nth-child(1) .service-icon {
+  background: rgba(197, 162, 104, 0.18);
+  color: var(--color-gold-light);
+  border: 1px solid rgba(197, 162, 104, 0.4);
+}
+
+.service-card:nth-child(1) .service-title {
+  color: #FFFFFF;
+}
+
+.service-card:nth-child(1) .service-desc {
+  color: #E8DDEE;
+}
+
+.service-card:nth-child(1) .service-deliverables {
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+
+.service-card:nth-child(1) .service-deliverables li {
+  color: #F7F5F0;
+}
+
+.service-card:nth-child(1) .service-deliverables li i {
+  color: var(--color-gold-light);
+}
+
+.service-card:nth-child(4) {
+  background: #F7F3FB;
+  border: 1.5px solid rgba(201, 184, 217, 0.65);
+}
+
 /* ==========================================================================
    SECTION 3: FEATURED CLIENT PROJECTS (PEARL IVORY BACKGROUND)
    ========================================================================== */
 .projects-section {
-  background: var(--color-ivory);
-  border-top: 1px solid var(--color-beige);
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-beige-border);
 }
 
 /* Category Filter Bar */
@@ -1366,8 +1457,8 @@ body {
 }
 
 .project-filter-btn {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  background: var(--color-porcelain);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 9999px;
   padding: 10px 22px;
   font-family: var(--font-heading);
@@ -1385,15 +1476,16 @@ body {
 .project-filter-btn:hover {
   background: var(--color-lavender-soft);
   border-color: var(--color-lavender);
+  color: var(--color-purple);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
 }
 
 .project-filter-btn.active {
-  background: var(--color-burgundy);
+  background: var(--color-purple);
   color: #FFFFFF;
-  border-color: var(--color-burgundy);
-  box-shadow: var(--shadow-burgundy);
+  border-color: var(--color-purple);
+  box-shadow: 0 4px 14px rgba(50, 20, 71, 0.25);
 }
 
 .filter-dot {
@@ -1410,7 +1502,7 @@ body {
 /* Case Study Cards */
 .case-study-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 28px;
   padding: 44px 40px;
   margin-bottom: 36px;
@@ -1638,7 +1730,7 @@ body {
 
 .case-study-card:hover .visual-mockup-frame {
   transform: translateY(-5px);
-  box-shadow: 0 24px 48px rgba(90, 32, 45, 0.12);
+  box-shadow: 0 24px 48px rgba(50, 20, 71, 0.12);
 }
 
 .mockup-header {
@@ -1648,8 +1740,9 @@ body {
   flex-wrap: wrap;
   gap: 12px;
   padding: 12px 18px;
-  border-bottom: 1px solid var(--color-beige);
-  background: var(--color-ivory);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: #24142E;
+  color: #FFFFFF;
 }
 
 .mockup-header-left {
@@ -1673,7 +1766,7 @@ body {
   font-family: monospace;
   font-size: 0.76rem;
   font-weight: 600;
-  color: var(--color-espresso-muted);
+  color: var(--color-champagne-beige);
   letter-spacing: 0.5px;
 }
 
@@ -1684,26 +1777,28 @@ body {
 }
 
 .mockup-switch-btn {
-  background: transparent;
-  border: 1px solid transparent;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 9999px;
   padding: 4px 12px;
   font-family: var(--font-heading);
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--color-espresso);
+  color: #E7D5C6;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .mockup-switch-btn:hover {
-  background: rgba(90, 32, 45, 0.08);
-  color: var(--color-burgundy);
+  background: rgba(255, 255, 255, 0.18);
+  color: #FFFFFF;
 }
 
 .mockup-switch-btn.active {
-  background: var(--color-burgundy);
-  color: #FFFFFF;
+  background: var(--color-gold);
+  color: #1F0D27;
+  border-color: var(--color-gold);
+  font-weight: 800;
 }
 
 .mockup-body {
@@ -1737,7 +1832,7 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   padding: 16px 18px;
-  border: 1px solid rgba(90, 32, 45, 0.08);
+  border: 1px solid rgba(50, 20, 71, 0.08);
   box-shadow: 0 4px 14px rgba(53, 39, 42, 0.04);
   transition: transform 0.3s ease;
 }
@@ -1785,7 +1880,7 @@ body {
   font-size: 0.76rem;
   font-weight: 600;
   color: var(--color-mauve);
-  border-top: 1px solid rgba(90, 32, 45, 0.06);
+  border-top: 1px solid rgba(50, 20, 71, 0.06);
   padding-top: 8px;
   display: flex;
   align-items: center;
@@ -1803,7 +1898,7 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   padding: 16px 18px;
-  border: 1px solid rgba(90, 32, 45, 0.08);
+  border: 1px solid rgba(50, 20, 71, 0.08);
 }
 
 .reel-badge {
@@ -1876,7 +1971,7 @@ body {
   background: #FFFFFF;
   border-radius: 16px;
   padding: 18px;
-  border: 1px solid rgba(90, 32, 45, 0.08);
+  border: 1px solid rgba(50, 20, 71, 0.08);
 }
 
 .identity-title {
@@ -1925,7 +2020,7 @@ body {
   background: #FFFFFF;
   border-radius: 14px;
   padding: 12px 16px;
-  border: 1px solid rgba(90, 32, 45, 0.08);
+  border: 1px solid rgba(50, 20, 71, 0.08);
   position: relative;
 }
 
@@ -1959,8 +2054,8 @@ body {
    SECTION 4: WORK METHODOLOGY (CHAMPAGNE BEIGE ALTERNATING BACKGROUND)
    ========================================================================== */
 .methodology-section {
-  background: var(--color-beige-light);
-  border-top: 1px solid var(--color-beige);
+  background: var(--color-porcelain);
+  border-top: 1px solid var(--color-beige-border);
 }
 
 .methodology-timeline {
@@ -1972,7 +2067,7 @@ body {
 
 .method-step {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 22px;
   padding: 32px 24px;
   box-shadow: var(--shadow-subtle);
@@ -1982,13 +2077,13 @@ body {
 
 .method-step:hover {
   transform: translateY(-6px);
-  border-color: var(--color-dusty-rose);
+  border-color: var(--color-lavender);
   box-shadow: var(--shadow-hover);
 }
 
 .method-step-badge {
   display: inline-block;
-  background: var(--color-burgundy);
+  background: var(--color-purple);
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.74rem;
@@ -2000,12 +2095,17 @@ body {
   margin-bottom: 18px;
 }
 
+.method-step:nth-child(1) .method-step-badge { background: var(--color-purple); }
+.method-step:nth-child(2) .method-step-badge { background: var(--color-sage-deep); }
+.method-step:nth-child(3) .method-step-badge { background: var(--color-camel); }
+.method-step:nth-child(4) .method-step-badge { background: var(--color-burgundy); }
+
 .method-step-icon {
   width: 54px;
   height: 54px;
   border-radius: 16px;
   background: var(--color-lavender-soft);
-  color: var(--color-burgundy);
+  color: var(--color-purple);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2014,9 +2114,14 @@ body {
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
+.method-step:nth-child(1) .method-step-icon { background: var(--color-lavender-soft); color: var(--color-purple); }
+.method-step:nth-child(2) .method-step-icon { background: var(--color-teal-soft); color: var(--color-teal); }
+.method-step:nth-child(3) .method-step-icon { background: var(--color-gold-wash); color: var(--color-camel); }
+.method-step:nth-child(4) .method-step-icon { background: var(--color-burgundy-wash); color: var(--color-burgundy); }
+
 .method-step:hover .method-step-icon {
   transform: scale(1.1) rotate(4deg);
-  background: var(--color-burgundy);
+}
   color: #FFFFFF;
 }
 
@@ -2035,47 +2140,97 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 5: FEATURED AUTHOR & 3D BOOK SHOWCASE (PEARL IVORY BACKGROUND)
+   SECTION 5: FEATURED AUTHOR & 3D INTERACTIVE BOOK SHOWCASE
+   Dramatic Luxury Dark Section in Deep Plum, Deep Purple & Antique Gold
    ========================================================================== */
 .author-section {
-  background: var(--color-ivory);
-  border-top: 1px solid var(--color-beige);
+  background: radial-gradient(ellipse at 50% 25%, #351743 0%, #220E2C 55%, #15071D 100%);
+  color: #FFFFFF;
+  border-top: 1px solid var(--color-gold-border);
   position: relative;
+  overflow: visible;
+}
+
+.author-section .section-tag-badge {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-gold-light);
+  border: 1px solid rgba(197, 162, 104, 0.35);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.author-section .section-main-heading {
+  color: #FFFFFF;
+}
+
+.author-section .section-sub-heading {
+  color: var(--color-pale-lavender);
 }
 
 .author-showcase-grid {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 56px;
-  align-items: flex-start;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 52px;
+  align-items: center;
+}
+
+.author-book-visual-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
 }
 
 .book-3d-stage {
   perspective: 1200px;
+  width: 100%;
+  min-height: 480px;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 28px 0 12px 0;
+  padding: 30px 10px 20px 10px;
+  margin: 0 auto;
+}
+
+/* Delicate Antique Gold Circular Botanical Wreath Frame (Centered Behind Book) */
+.book-botanical-wreath {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 380px;
+  max-width: 95%;
+  max-height: 95%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 16px rgba(197, 162, 104, 0.35));
 }
 
 .book-3d-card {
-  width: 280px;
-  height: 410px;
+  width: 275px;
+  height: 405px;
   position: relative;
+  z-index: 2;
   transform-style: preserve-3d;
-  transform: rotateY(-18deg) rotateX(10deg);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  transform: rotateY(-12deg) rotateX(4deg);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
   cursor: grab;
+  margin: 0 auto;
 }
 
-.book-3d-stage:hover .book-3d-card {
-  transform: rotateY(-8deg) rotateX(4deg) scale(1.04);
+.book-3d-card:active {
+  cursor: grabbing;
 }
 
 .book-cover-front {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, #40141E 0%, #5A202D 52%, #2E0E15 100%);
+  background: linear-gradient(145deg, var(--color-purple) 0%, var(--color-plum) 55%, var(--color-purple-dark) 100%);
   border-radius: 6px 14px 14px 6px;
   padding: 28px 22px;
   color: #FFFFFF;
@@ -2083,7 +2238,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   border-left: 4px solid var(--color-gold);
-  box-shadow: 0 20px 48px rgba(64, 20, 30, 0.42), inset 0 0 0 1px rgba(255,255,255,0.18);
+  box-shadow: 0 24px 50px rgba(50, 20, 71, 0.42), inset 0 0 0 1px rgba(255, 255, 255, 0.16);
   backface-visibility: hidden;
 }
 
@@ -2095,18 +2250,18 @@ body {
   width: 34px;
   transform: rotateY(-90deg) translateX(-17px);
   transform-origin: left;
-  background: #2E0E15;
+  background: var(--color-purple-dark);
   border-radius: 4px 0 0 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset -2px 0 8px rgba(0,0,0,0.5);
+  box-shadow: inset -2px 0 8px rgba(0, 0, 0, 0.55);
 }
 
 .spine-text {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  color: var(--color-gold-light);
+  color: var(--color-lavender);
   font-family: var(--font-heading);
   font-size: 0.68rem;
   font-weight: 700;
@@ -2114,30 +2269,46 @@ body {
 }
 
 .book-stage-shadow {
-  width: 260px;
-  height: 26px;
-  background: radial-gradient(ellipse, rgba(90, 32, 45, 0.35) 0%, transparent 70%);
-  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  width: 250px;
+  height: 24px;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.5) 0%, transparent 70%);
+  margin: 18px auto 0 auto;
   filter: blur(6px);
-  transform: translateY(-6px);
+  pointer-events: none;
 }
 
 .book-interaction-caption {
+  position: relative;
+  z-index: 3;
+  margin-top: 14px;
   text-align: center;
-  font-size: 0.78rem;
-  color: var(--color-espresso-muted);
+  font-size: 0.8rem;
   font-weight: 600;
-  margin-top: 10px;
-  display: flex;
+  color: var(--color-champagne-beige);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(197, 162, 104, 0.35);
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.book-interaction-caption i {
+  color: var(--color-gold-light);
 }
 
 .book-cover-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
 }
 
 .book-author-mark {
@@ -2145,52 +2316,43 @@ body {
   font-size: 0.72rem;
   font-weight: 800;
   letter-spacing: 2px;
-  color: #FAF4ED;
-}
-
-.book-verified-badge {
-  font-size: 0.68rem;
-  font-weight: 800;
-  background: rgba(184, 154, 98, 0.22);
-  padding: 3px 8px;
-  border-radius: 9999px;
-  border: 1px solid var(--color-gold);
-  color: #FFFFFF;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
 }
 
 .book-cover-center {
   text-align: center;
-  margin: 16px 0;
+  margin: 14px 0;
 }
 
 .book-emblem-circle {
-  width: 48px;
-  height: 48px;
+  width: 46px;
+  height: 46px;
   margin: 0 auto 12px auto;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(197, 162, 104, 0.12);
   border: 1.5px solid var(--color-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-gold);
-  font-size: 1.2rem;
+  color: var(--color-gold-light);
+  font-size: 1.15rem;
 }
 
 .book-title-display {
   font-family: var(--font-serif);
-  font-size: 1.7rem;
+  font-size: 1.65rem;
   font-weight: 800;
-  color: #FAF4ED;
+  color: #FFFFFF;
   letter-spacing: 1.5px;
   line-height: 1.15;
   margin-bottom: 4px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .book-subtitle-display {
   font-family: var(--font-heading);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 700;
   color: var(--color-gold-light);
   letter-spacing: 2px;
@@ -2205,8 +2367,8 @@ body {
 }
 
 .book-tagline-text {
-  font-size: 0.76rem;
-  color: #F3E9DF;
+  font-size: 0.74rem;
+  color: #EAE3F2;
   line-height: 1.45;
   max-width: 210px;
   margin: 0 auto;
@@ -2215,14 +2377,14 @@ body {
 .book-edition-note {
   font-size: 0.68rem;
   font-weight: 600;
-  color: var(--color-gold-light);
+  color: var(--color-lavender);
   text-align: center;
   letter-spacing: 0.8px;
-  border-top: 1px solid rgba(255,255,255,0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: 8px;
 }
 
-/* Dignitary Verifications */
+/* Dignitary Verifications (Dark Section Cards) */
 .dignitary-cards-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2231,20 +2393,22 @@ body {
 }
 
 .dignitary-card {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(197, 162, 104, 0.3);
   border-radius: 20px;
   padding: 22px 20px;
   display: flex;
   gap: 16px;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .dignitary-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
-  border-color: var(--color-dusty-rose);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32);
+  border-color: var(--color-gold-light);
 }
 
 .dignitary-icon-box {
@@ -2252,8 +2416,9 @@ body {
   height: 44px;
   flex-shrink: 0;
   border-radius: 12px;
-  background: var(--color-lavender-soft);
-  color: var(--color-burgundy);
+  background: rgba(197, 162, 104, 0.18);
+  color: var(--color-gold-light);
+  border: 1px solid rgba(197, 162, 104, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2272,26 +2437,26 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--color-burgundy);
+  color: var(--color-gold-light);
 }
 
 .dignitary-name {
   font-family: var(--font-serif);
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--color-espresso-dark);
+  color: #FFFFFF;
   line-height: 1.2;
 }
 
 .dignitary-office {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--color-plum);
+  color: var(--color-champagne-beige);
 }
 
 .dignitary-desc {
   font-size: 0.82rem;
-  color: var(--color-espresso-muted);
+  color: var(--color-pale-lavender);
   line-height: 1.45;
   margin-top: 4px;
 }
@@ -2305,17 +2470,19 @@ body {
 }
 
 .speaking-box {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(197, 162, 104, 0.25);
   border-radius: 18px;
   padding: 20px;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   transition: transform 0.35s ease, border-color 0.35s ease;
 }
 
 .speaking-box:hover {
   transform: translateY(-3px);
-  border-color: var(--color-dusty-rose);
+  border-color: var(--color-gold);
 }
 
 .speaking-header {
@@ -2329,8 +2496,9 @@ body {
   font-family: var(--font-heading);
   font-size: 0.72rem;
   font-weight: 800;
-  color: var(--color-burgundy);
-  background: var(--color-lavender-soft);
+  color: var(--color-gold-light);
+  background: rgba(197, 162, 104, 0.15);
+  border: 1px solid rgba(197, 162, 104, 0.3);
   padding: 3px 10px;
   border-radius: 9999px;
   margin-bottom: 6px;
@@ -2340,22 +2508,24 @@ body {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-espresso-dark);
+  color: #FFFFFF;
 }
 
 .speaking-text {
   font-size: 0.84rem;
-  color: var(--color-espresso-muted);
+  color: var(--color-champagne-beige);
   line-height: 1.5;
 }
 
-/* Book Pillars Tabs */
+/* Book Pillars Tabs (Dark Section Theme) */
 .book-pillars-box {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-beige);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(201, 184, 217, 0.25);
   border-radius: 20px;
   padding: 24px;
-  box-shadow: var(--shadow-subtle);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   margin-bottom: 24px;
 }
 
@@ -2372,19 +2542,19 @@ body {
   font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 800;
-  color: var(--color-espresso-dark);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .pillars-main-title i {
-  color: var(--color-burgundy);
+  color: var(--color-gold-light);
 }
 
 .pillars-hint {
   font-size: 0.78rem;
-  color: var(--color-espresso-muted);
+  color: var(--color-dusty-lavender);
   font-weight: 600;
 }
 
@@ -2396,14 +2566,14 @@ body {
 }
 
 .pillar-tab-btn {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 9999px;
   padding: 6px 14px;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--color-espresso);
+  color: #E7D5C6;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -2412,16 +2582,18 @@ body {
 }
 
 .pillar-tab-btn:hover {
-  background: var(--color-lavender-soft);
-  border-color: var(--color-lavender);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: var(--color-gold);
+  color: #FFFFFF;
   transform: translateY(-1px);
 }
 
 .pillar-tab-btn.active {
-  background: var(--color-burgundy);
-  color: #FFFFFF;
-  border-color: var(--color-burgundy);
-  box-shadow: 0 4px 12px rgba(90, 32, 45, 0.22);
+  background: var(--color-gold);
+  color: #1F0D27;
+  border-color: var(--color-gold);
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(197, 162, 104, 0.4);
 }
 
 .tab-step-num {
@@ -2431,8 +2603,8 @@ body {
 }
 
 .pillar-panels-display {
-  background: var(--color-ivory);
-  border: 1px solid var(--color-beige);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 14px;
   padding: 16px 20px;
   min-height: 72px;
@@ -2443,9 +2615,13 @@ body {
 .pillar-desc-panel {
   display: none;
   font-size: 0.88rem;
-  color: var(--color-espresso);
+  color: #F7F5F0;
   line-height: 1.6;
   animation: fadeInTab 0.35s ease;
+}
+
+.pillar-desc-panel strong {
+  color: var(--color-gold-light);
 }
 
 .pillar-desc-panel.active {
@@ -2460,11 +2636,11 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 6: COMPREHENSIVE RESUME & CV (CHAMPAGNE BEIGE ALTERNATING)
+   SECTION 6: COMPREHENSIVE RESUME & CV (SOFT WHITE EDITORIAL SURFACE)
    ========================================================================== */
 .resume-section {
-  background: var(--color-beige-light);
-  border-top: 1px solid var(--color-beige);
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-beige-border);
 }
 
 .resume-cta-bar {
@@ -2481,21 +2657,21 @@ body {
   gap: 8px;
   padding: 11px 24px;
   border-radius: 9999px;
-  background: var(--color-burgundy);
+  background: var(--color-purple);
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
   border: none;
   cursor: pointer;
-  box-shadow: var(--shadow-burgundy);
+  box-shadow: 0 4px 14px rgba(50, 20, 71, 0.25);
   transition: all var(--transition-fast);
 }
 
 .btn-print-resume:hover {
-  background: var(--color-burgundy-dark);
+  background: var(--color-plum);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(90, 32, 45, 0.36);
+  box-shadow: 0 8px 22px rgba(50, 20, 71, 0.35);
 }
 
 .btn-call-resume {
@@ -2504,7 +2680,7 @@ body {
   gap: 8px;
   padding: 11px 24px;
   border-radius: 9999px;
-  background: var(--color-linen);
+  background: var(--color-porcelain);
   color: var(--color-espresso);
   font-family: var(--font-heading);
   font-size: 0.88rem;
@@ -2536,8 +2712,8 @@ body {
 }
 
 .resume-profile-card {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
+  background: var(--color-porcelain);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 22px;
   padding: 28px 24px;
   box-shadow: var(--shadow-subtle);
@@ -2548,21 +2724,21 @@ body {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: var(--color-espresso);
+  background: var(--color-purple);
   color: var(--color-gold-light);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.45rem;
   margin: 0 auto 16px auto;
-  box-shadow: 0 4px 16px rgba(74, 52, 42, 0.22);
+  box-shadow: 0 4px 16px rgba(50, 20, 71, 0.22);
 }
 
 .resume-candidate-name {
   font-family: var(--font-serif);
   font-size: 1.45rem;
   font-weight: 700;
-  color: var(--color-espresso-dark);
+  color: var(--color-purple);
   margin-bottom: 4px;
 }
 
@@ -2570,7 +2746,7 @@ body {
   font-family: var(--font-heading);
   font-size: 0.84rem;
   font-weight: 800;
-  color: var(--color-cocoa);
+  color: var(--color-plum);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
@@ -2857,8 +3033,8 @@ body {
 }
 
 .skill-category-box {
-  background: var(--color-linen);
-  border: 1px solid var(--color-khaki);
+  background: var(--color-porcelain);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 16px;
   padding: 18px 16px;
 }
@@ -2870,9 +3046,9 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: var(--color-espresso);
+  color: var(--color-purple);
   margin-bottom: 12px;
-  border-bottom: 1px solid var(--color-khaki);
+  border-bottom: 1px solid var(--color-beige-border);
   padding-bottom: 6px;
 }
 
@@ -2888,7 +3064,7 @@ body {
   font-weight: 700;
   color: var(--color-espresso);
   background: #FFFFFF;
-  border: 1px solid var(--color-khaki);
+  border: 1px solid var(--color-beige-border);
   padding: 4px 10px;
   border-radius: 9999px;
   transition: all var(--transition-fast);
@@ -2897,15 +3073,15 @@ body {
 .skill-tags-flow span:hover {
   background: var(--color-lavender-soft);
   border-color: var(--color-lavender);
-  color: var(--color-burgundy);
+  color: var(--color-purple);
 }
 
 /* ==========================================================================
-   SECTION 7: ACHIEVEMENTS & CREDIBILITY (PEARL IVORY BACKGROUND)
+   SECTION 7: ACHIEVEMENTS & CREDIBILITY (PORCELAIN CANVAS)
    ========================================================================== */
 .achievements-section {
-  background: var(--color-linen);
-  border-top: 1px solid var(--color-khaki);
+  background: var(--color-porcelain);
+  border-top: 1px solid var(--color-beige-border);
 }
 
 .achievements-timeline {
@@ -2916,16 +3092,16 @@ body {
 
 @keyframes achieveHalo {
   0%, 100% {
-    box-shadow: 0 4px 14px rgba(74, 52, 42, 0.16);
+    box-shadow: 0 4px 14px rgba(50, 20, 71, 0.16);
   }
   50% {
-    box-shadow: 0 4px 24px rgba(201, 164, 109, 0.4), 0 0 0 5px rgba(201, 184, 217, 0.3);
+    box-shadow: 0 4px 24px rgba(197, 162, 104, 0.4), 0 0 0 5px rgba(201, 184, 217, 0.3);
   }
 }
 
 .achievement-card {
   background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 22px;
   padding: 34px 30px;
   display: flex;
@@ -2951,20 +3127,20 @@ body {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  background: var(--color-espresso);
-  color: #FFFFFF;
+  background: var(--color-purple);
+  color: var(--color-gold-light);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
-  box-shadow: 0 4px 14px rgba(74, 52, 42, 0.22);
-  transition: transform 0.35s ease;
+  box-shadow: 0 4px 14px rgba(50, 20, 71, 0.22);
+  transition: transform 0.35s ease, background 0.35s ease;
 }
 
 .achievement-card:hover .achieve-icon-circle {
   animation: achieveHalo 2s infinite ease-in-out;
   transform: scale(1.1);
-  background: var(--color-burgundy);
+  background: var(--color-plum);
 }
 
 .achieve-tag {
@@ -2973,7 +3149,7 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  color: var(--color-cocoa);
+  color: var(--color-plum);
   text-align: center;
 }
 
@@ -3017,35 +3193,37 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 8: CONTACT SECTION (CALM LIGHT LINEN BACKGROUND)
+   SECTION 8: CONTACT SECTION (DISTINCTIVE GROUNDED DEEP PLUM & PURPLE)
    ========================================================================== */
 .contact-section {
   padding: 110px 0 80px 0;
-  background: var(--color-linen);
-  color: var(--color-espresso);
-  border-top: 1px solid var(--color-khaki);
+  background: linear-gradient(180deg, #321447 0%, #441732 45%, #1F0D25 100%);
+  color: #FFFFFF;
+  border-top: 1px solid var(--color-gold-border);
   position: relative;
   z-index: 25;
 }
 
-.badge-on-dark {
-  background: #FFFFFF;
-  color: var(--color-espresso);
-  border: 1px solid var(--color-khaki);
+.badge-on-dark,
+.contact-section .section-tag-badge {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-gold-light);
+  border: 1px solid rgba(197, 162, 104, 0.35);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.footer-title {
+.contact-section .footer-title {
   font-family: var(--font-serif);
   font-size: clamp(2.2rem, 3.8vw, 3rem);
   font-weight: 700;
-  color: var(--color-espresso-dark);
+  color: #FFFFFF;
   margin-bottom: 12px;
   letter-spacing: -0.5px;
 }
 
-.footer-subtitle {
+.contact-section .footer-subtitle {
   font-size: 1.1rem;
-  color: var(--color-espresso-muted);
+  color: #EAE3F2;
   max-width: 640px;
   margin: 0 auto 44px auto;
   line-height: 1.7;
@@ -3056,10 +3234,10 @@ body {
   max-width: 680px;
   margin: 0 auto 44px auto;
   background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 24px;
   padding: 38px 34px;
-  box-shadow: 0 16px 40px rgba(74, 52, 42, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   text-align: left;
   color: var(--color-espresso);
 }
@@ -3089,8 +3267,8 @@ body {
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: var(--color-espresso);
-  background: var(--color-linen);
-  border: 1.5px solid var(--color-khaki);
+  background: var(--color-porcelain);
+  border: 1.5px solid var(--color-beige-border);
   border-radius: 12px;
   padding: 12px 16px;
   transition: all var(--transition-fast);
@@ -3099,8 +3277,8 @@ body {
 
 .form-input:focus {
   background: #FFFFFF;
-  border-color: var(--color-burgundy);
-  box-shadow: 0 0 0 4px rgba(139, 30, 45, 0.12);
+  border-color: var(--color-plum);
+  box-shadow: 0 0 0 4px rgba(57, 35, 72, 0.12);
 }
 
 .form-select {
@@ -3151,15 +3329,15 @@ body {
 }
 
 .btn-submit-email {
-  background: var(--color-burgundy);
+  background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-purple) 100%);
   color: #FFFFFF;
-  box-shadow: var(--shadow-burgundy);
+  box-shadow: var(--shadow-plum);
 }
 
 .btn-submit-email:hover {
-  background: var(--color-burgundy-dark);
+  background: var(--color-purple);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(139, 30, 45, 0.38);
+  box-shadow: 0 10px 28px rgba(50, 20, 71, 0.38);
 }
 
 .form-status-msg {
@@ -3173,7 +3351,7 @@ body {
 .form-status-msg.success { color: #166534; }
 .form-status-msg.error { color: #b91c1c; }
 
-/* Direct Contact Chips (Light Luxury Design) */
+/* Direct Contact Chips */
 .contact-links-pills {
   display: flex;
   flex-wrap: wrap;
@@ -3188,9 +3366,9 @@ body {
   gap: 8px;
   padding: 10px 22px;
   border-radius: 9999px;
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
-  color: var(--color-espresso);
+  background: rgba(255, 255, 255, 0.10);
+  border: 1.5px solid rgba(197, 162, 104, 0.35);
+  color: #FAF7F2;
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 700;
@@ -3200,8 +3378,8 @@ body {
 }
 
 .contact-chip:hover {
-  background: var(--color-linen);
-  color: var(--color-burgundy);
+  background: rgba(255, 255, 255, 0.20);
+  color: #FFFFFF;
   border-color: var(--color-gold);
   transform: translateY(-2px);
   box-shadow: var(--shadow-card);
@@ -3221,15 +3399,15 @@ body {
 
 .chip-location {
   cursor: default;
-  background: #FFFFFF;
-  border-color: var(--color-khaki);
-  color: var(--color-espresso-muted);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.18);
+  color: var(--color-lavender);
 }
 
 .chip-location:hover {
-  background: #FFFFFF;
-  color: var(--color-espresso-muted);
-  border-color: var(--color-khaki);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-lavender);
+  border-color: rgba(255, 255, 255, 0.18);
   transform: none;
 }
 
@@ -3238,10 +3416,10 @@ body {
    Grounded in Deep Wine / Espresso with Ivory & Champagne Details
    ========================================================================== */
 .footer-section {
-  background: var(--color-espresso-dark);
-  color: var(--color-linen);
+  background: var(--color-purple-dark);
+  color: var(--color-lavender);
   padding: 44px 0 36px 0;
-  border-top: 1px solid rgba(201, 164, 109, 0.25);
+  border-top: 1px solid rgba(197, 162, 104, 0.22);
   position: relative;
   z-index: 30;
 }
@@ -3272,7 +3450,7 @@ body {
   gap: 8px;
   padding: 10px 24px;
   border-radius: 9999px;
-  background: rgba(201, 164, 109, 0.15);
+  background: rgba(197, 162, 104, 0.15);
   border: 1px solid var(--color-gold);
   color: #FAF7F2;
   font-family: var(--font-heading);
@@ -3360,8 +3538,8 @@ body {
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .resume-editorial-layout { grid-template-columns: 1fr; }
   .resume-skills-grid { grid-template-columns: 1fr; }
-  .author-showcase-grid { grid-template-columns: 1fr; gap: 40px; }
-  .book-3d-stage { padding: 10px 0 20px 0; }
+  .author-showcase-grid { grid-template-columns: 1fr; gap: 48px; }
+  .book-3d-stage { min-height: 450px; padding: 20px 10px 24px 10px; }
 }
 
 @media (max-width: 860px) {
@@ -3417,8 +3595,10 @@ body {
   .resume-section-card { padding: 24px 18px; }
   .resume-exp-timeline { padding-left: 20px; }
   .exp-timeline-marker { left: -20px; }
-  .book-3d-card { width: 240px; height: 360px; }
-  .book-title-display { font-size: 1.4rem; }
+  .book-3d-stage { min-height: 410px; }
+  .book-3d-card { width: 235px; height: 350px; }
+  .book-title-display { font-size: 1.35rem; }
+  .book-botanical-wreath { width: 310px; height: 310px; }
   .dignitary-card { flex-direction: column; gap: 12px; }
   .dignitary-icon-box { width: 38px; height: 38px; font-size: 1rem; }
   .resume-cta-bar { flex-direction: column; align-items: stretch; }

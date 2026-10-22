@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing Professional | Smooth Scroll Experience</title>
+  <meta name="description"
+    content="Smooth scroll-driven interactive animation portfolio powered by high-resolution frame sequence." />
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-white-purple">
+
+  <!-- Transparent Navbar (No background, minimal and clean) -->
+  <header class="transparent-navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo" id="brand-logo">
+        <span class="logo-circle"><i class="fa-solid fa-chart-line"></i></span>
+        <span class="logo-text">ELENA <span class="text-purple">VANCE</span></span>
+      </a>
+
+      <div class="nav-right">
+        <span class="role-pill">Digital Marketing Professional</span>
+        <a href="#contact-reach" class="btn-pill-dark" id="header-contact-btn">
+          <span>Get in Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Preloader Screen (Smooth fadeout once first frames are cached) -->
+  <div class="preloader-overlay" id="preloader">
+    <div class="preloader-content">
+      <div class="spinner-circle"></div>
+      <div class="preloader-text">Loading Smooth Experience...</div>
+      <div class="preloader-progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <div class="preloader-percentage" id="progress-text">0%</div>
+    </div>
+  </div>
+
+  <main>
+    <!-- SCROLL ANIMATION TRACK CONTAINER -->
+    <!-- The tall container provides smooth scrolling depth -->
+    <section class="scroll-animation-track" id="scroll-track">
+      <!-- Sticky Full-Screen Viewport -->
+      <div class="sticky-viewport" id="sticky-viewport">
+
+        <!-- Ambient Soft Lavender Aura Glow in background -->
+        <div class="ambient-glow glow-center"></div>
+
+        <!-- HTML5 Scroll Canvas: Centerpiece of Attraction -->
+        <canvas id="scroll-canvas" class="scroll-canvas"></canvas>
+
+        <!-- Dynamic Overlay Narrative Milestones (Fade in sync with frame story) -->
+        <div class="narrative-overlay" id="narrative-overlay">
+          <!-- Milestone 1 (0% - 22% scroll) -->
+          <div class="milestone-card" id="milestone-1">
+            <span class="milestone-tag">Performance Marketing</span>
+            <h1 class="milestone-title">Data-Driven Growth & Acquisition</h1>
+            <p class="milestone-desc">Scaling B2B and D2C brands through predictive analytics and high-ROI conversion
+              funnels.</p>
+          </div>
+
+          <!-- Milestone 2 (28% - 55% scroll: matches floating audience analytics) -->
+          <div class="milestone-card" id="milestone-2">
+            <span class="milestone-tag">Real-Time Metrics</span>
+            <h2 class="milestone-title">+340% Audience Scaling</h2>
+            <p class="milestone-desc">Orchestrating multi-channel paid acquisition across Google Ads, Meta, and TikTok.
+            </p>
+          </div>
+
+          <!-- Milestone 3 (62% - 82% scroll) -->
+          <div class="milestone-card" id="milestone-3">
+            <span class="milestone-tag">Full-Funnel Strategy</span>
+            <h2 class="milestone-title">Conversion Rate Optimization</h2>
+            <p class="milestone-desc">Turning high-intent traffic into sustained enterprise revenue and customer
+              lifetime value.</p>
+          </div>
+
+          <!-- Milestone 4 (88% - 100% scroll: matches DIGITAL MARKETING PROFESSIONAL title) -->
+          <div class="milestone-card milestone-final" id="milestone-4">
+            <span class="milestone-tag">Available For Strategic Roles</span>
+            <h2 class="milestone-title">Digital Marketing Professional</h2>
+            <div class="final-actions-row">
+              <a href="#contact-reach" class="btn-pill-dark">
+                <span>Contact Elena</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="#" class="btn-pill-outline" id="cv-download-btn">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                <span>Download Resume</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Playback & Frame Indicator Pill (Bottom Center) -->
+        <div class="scroll-pill-indicator" id="scroll-pill" role="button" tabindex="0" title="Click to Pause / Play animation">
+          <div class="playback-icon" id="playback-icon">
+            <i class="fa-solid fa-pause" id="playback-icon-i"></i>
+          </div>
+          <span class="scroll-pill-text" id="scroll-status-text">Playing Animation</span>
+          <div class="frame-counter-pill" id="frame-counter">001 / 240</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MINIMAL FINAL REACH / CONTACT SECTION -->
+    <section class="minimal-footer-section" id="contact-reach">
+      <div class="container text-center">
+        <h2 class="footer-title">Ready To Accelerate Your Growth?</h2>
+        <p class="footer-subtitle">Reach out directly for consulting, executive growth leadership, or full-funnel
+          audits.</p>
+
+        <div class="contact-links-pills">
+          <a href="mailto:elena@marketingpro.com" class="contact-chip">
+            <i class="fa-regular fa-envelope"></i>
+            <span>elena@marketingpro.com</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-chip">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-chip">
+            <i class="fa-brands fa-x-twitter"></i>
+            <span>X / Twitter</span>
+          </a>
+          <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" class="contact-chip">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+
+        <div class="copyright-text">
+          &copy; <span id="current-year">2026</span> Elena Vance &bull; Digital Marketing Professional. All rights
+          reserved.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
