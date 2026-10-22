@@ -860,6 +860,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .resume-side-block,
     .resume-section-card,
     .achievement-card,
+    .achievement-card-luxury,
     .contact-form-wrapper,
     .contact-links-pills
   `);
@@ -885,6 +886,94 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     revealTargets.forEach((el) => el.classList.add('revealed'));
   }
+
+  // ==========================================================================
+  // 18. ACHIEVEMENT PHOTO LIGHTBOX MODAL CONTROLLER
+  // ==========================================================================
+  const lightboxModal = document.getElementById('achievement-lightbox');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+  const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCategory = document.getElementById('lightbox-category');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxDesc = document.getElementById('lightbox-desc');
+  const lightboxVenue = document.getElementById('lightbox-venue');
+
+  function openAchievementLightbox(frame) {
+    if (!lightboxModal || !frame) return;
+    const imgEl = frame.querySelector('.achieve-img');
+    const cat = frame.getAttribute('data-caption-cat') || 'Achievement Milestone';
+    const title = frame.getAttribute('data-caption-title') || 'Sakina Murtaza Saifee';
+    const desc = frame.getAttribute('data-caption-desc') || '';
+    const venue = frame.getAttribute('data-caption-venue') || '';
+
+    if (imgEl && imgEl.src && !imgEl.classList.contains('img-fallback-active')) {
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt || title;
+      lightboxImg.style.display = 'block';
+    } else {
+      // If photo is pending import, set placeholder or descriptive preview
+      lightboxImg.src = imgEl ? imgEl.src : '';
+      lightboxImg.alt = title;
+    }
+
+    if (lightboxCategory) lightboxCategory.textContent = cat;
+    if (lightboxTitle) lightboxTitle.textContent = title;
+    if (lightboxDesc) lightboxDesc.textContent = desc;
+    if (lightboxVenue) {
+      if (venue) {
+        lightboxVenue.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${venue}`;
+        lightboxVenue.style.display = 'inline-flex';
+      } else {
+        lightboxVenue.style.display = 'none';
+      }
+    }
+
+    lightboxModal.classList.add('active');
+    lightboxModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeAchievementLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    lightboxModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Attach click listeners to all achievement zoom buttons and photo frames
+  const photoFrames = document.querySelectorAll('.achieve-photo-frame');
+  photoFrames.forEach((frame) => {
+    const zoomBtn = frame.querySelector('.photo-zoom-overlay');
+    if (zoomBtn) {
+      zoomBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openAchievementLightbox(frame);
+      });
+    }
+
+    // Allow clicking the photo aspect box
+    const aspectBox = frame.querySelector('.photo-aspect-box');
+    if (aspectBox) {
+      aspectBox.addEventListener('click', () => {
+        openAchievementLightbox(frame);
+      });
+    }
+  });
+
+  if (lightboxCloseBtn) {
+    lightboxCloseBtn.addEventListener('click', closeAchievementLightbox);
+  }
+  if (lightboxBackdrop) {
+    lightboxBackdrop.addEventListener('click', closeAchievementLightbox);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+      closeAchievementLightbox();
+    }
+  });
 
   requestAnimationFrame(renderLoop);
 });
