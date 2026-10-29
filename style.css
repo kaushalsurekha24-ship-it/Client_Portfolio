@@ -140,6 +140,8 @@ html {
   font-size: 16px;
   background-color: var(--color-linen);
   color: var(--color-text-neutral);
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body.theme-classic-ivory,
@@ -302,43 +304,32 @@ body {
 }
 
 .brand-logo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
   text-decoration: none;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.8px;
-  color: var(--color-espresso-dark);
+  flex-shrink: 0;
+  line-height: 1;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
-.logo-circle {
-  width: 38px;
+.brand-logo:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.header-brand-logo-img {
   height: 38px;
-  border-radius: 50%;
-  background: var(--color-espresso);
-  color: var(--color-linen);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.92rem;
-  box-shadow: 0 4px 14px rgba(74, 52, 42, 0.22);
-  transition: transform var(--transition-fast), background var(--transition-fast);
+  width: auto;
+  max-width: 195px;
+  object-fit: contain;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  transition: height var(--transition-fast), max-width var(--transition-fast);
 }
 
-.brand-logo:hover .logo-circle {
-  transform: scale(1.06);
-  background: var(--color-burgundy);
-}
-
-.logo-text {
-  font-weight: 800;
-  letter-spacing: 1.2px;
-}
-
-.logo-text .text-plum {
-  color: var(--color-burgundy);
+.transparent-navbar.navbar-scrolled .header-brand-logo-img {
+  height: 34px;
+  max-width: 175px;
 }
 
 .nav-links {
@@ -4297,6 +4288,9 @@ body {
    RESPONSIVE DESIGN (BREAKPOINTS)
    ========================================================================== */
 @media (max-width: 1120px) {
+  .nav-links { gap: 16px; }
+  .nav-link { font-size: 0.88rem; }
+  .header-brand-logo-img { height: 34px; max-width: 175px; }
   .hero-name-heading { font-size: clamp(2.2rem, 4.5vw, 3.2rem); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .case-card-grid { grid-template-columns: 1fr; }
@@ -4308,9 +4302,10 @@ body {
   .book-3d-stage { min-height: 450px; padding: 20px 10px 24px 10px; }
 }
 
-@media (max-width: 860px) {
+@media (max-width: 1040px) {
   .nav-links { display: none; }
   .mobile-menu-btn { display: block; }
+  .header-brand-logo-img { height: 34px; max-width: 175px; }
   .hero-name-heading { font-size: 2.3rem; }
   .hero-role-title { font-size: 1.15rem; }
   .hero-lead-text { font-size: 1.05rem; }
@@ -4350,6 +4345,9 @@ body {
 }
 
 @media (max-width: 600px) {
+  #header-contact-btn {
+    display: none;
+  }
   .form-actions-row {
     flex-direction: column;
     gap: 10px;
@@ -4369,6 +4367,7 @@ body {
   .case-study-card { padding: 28px 18px; }
   .contact-form-wrapper { padding: 24px 18px; }
   .nav-container { padding: 14px 20px; }
+  .header-brand-logo-img { height: 32px; max-width: 160px; }
   .achievement-card { flex-direction: column; gap: 14px; }
   .achieve-badge-col { align-items: flex-start; }
   .resume-section { padding: 60px 0; }
@@ -4386,6 +4385,11 @@ body {
   .dignitary-icon-box { width: 38px; height: 38px; font-size: 1rem; }
   .resume-cta-bar { flex-direction: column; align-items: stretch; }
   .btn-download-resume, .btn-print-resume, .btn-call-resume { width: 100%; justify-content: center; text-align: center; }
+}
+
+@media (max-width: 420px) {
+  .nav-container { padding: 10px 14px; }
+  .header-brand-logo-img { height: 26px; max-width: 135px; }
 }
 
 /* ==========================================================================
