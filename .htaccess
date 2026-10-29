@@ -1,0 +1,8 @@
+# Security Headers for Apache / LiteSpeed / cPanel
+<IfModule mod_headers.c>
+    Header set X-Frame-Options "DENY"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; media-src 'self' blob:; connect-src 'self' https://api.web3forms.com https://formspree.io; frame-src 'none'; child-src 'none'; frame-ancestors 'none'; form-action 'self' https://api.web3forms.com https://formspree.io; base-uri 'self';"
+</IfModule>

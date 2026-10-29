@@ -8,6 +8,10 @@
   <meta name="description"
     content="Official portfolio and curriculum vitae of Sakina Murtaza Saifee — Digital Marketing Expert, Social Media Manager, Graphic Designer, Performance Marketer, and Author based in Jalgaon, India." />
 
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: blob:; media-src 'self' blob:; connect-src 'self' https://api.web3forms.com https://formspree.io; frame-src 'none'; child-src 'none'; form-action 'self' https://api.web3forms.com https://formspree.io; base-uri 'self';" />
+
   <!-- Google Fonts: Cormorant Garamond (Refined Editorial Serif), Playfair Display, Manrope (Modern Clean UI), DM Sans (Readable Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,8 +19,8 @@
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap"
     rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Font Awesome Icons with Subresource Integrity (SRI) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -1822,21 +1826,29 @@
         <!-- Direct Inquiry Form -->
         <div class="contact-form-wrapper">
           <form class="strategic-contact-form" id="strategic-contact-form" novalidate>
+            <!-- Anti-Spam Honeypot Field (Hidden from human visitors; detects automated bots) -->
+            <div class="honeypot-wrap" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none;">
+              <label for="contact-botcheck">Do not fill this field</label>
+              <input type="text" name="botcheck" id="contact-botcheck" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="form-row">
               <div class="form-group">
-                <label for="contact-name" class="form-label">Full Name</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Rahul Sharma" required />
+                <label for="contact-name" class="form-label">Full Name <span class="required-star" aria-hidden="true">*</span></label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Rahul Sharma" maxlength="100" autocomplete="name" required aria-required="true" aria-describedby="error-contact-name" />
+                <span class="field-error-msg" id="error-contact-name" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
-                <label for="contact-phone" class="form-label">Phone or Email</label>
-                <input type="text" id="contact-phone" class="form-input" placeholder="e.g. +91 98765 43210 or email" required />
+                <label for="contact-phone" class="form-label">Phone or Email <span class="required-star" aria-hidden="true">*</span></label>
+                <input type="text" id="contact-phone" class="form-input" placeholder="e.g. +91 98765 43210 or email" maxlength="120" autocomplete="email tel" required aria-required="true" aria-describedby="error-contact-phone" />
+                <span class="field-error-msg" id="error-contact-phone" role="alert" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
-                <label for="contact-service" class="form-label">Service of Interest</label>
-                <select id="contact-service" class="form-input form-select">
+                <label for="contact-service" class="form-label">Service of Interest <span class="required-star" aria-hidden="true">*</span></label>
+                <select id="contact-service" class="form-input form-select" required aria-required="true" aria-describedby="error-contact-service">
                   <option value="Social Media Management">Social Media Management</option>
                   <option value="Graphic Design & Creatives">Graphic Design & Creatives</option>
                   <option value="Performance Marketing">Performance Marketing</option>
@@ -1844,16 +1856,22 @@
                   <option value="Digital Branding">Digital Branding</option>
                   <option value="Comprehensive Marketing Consultation">Comprehensive Marketing Consultation</option>
                 </select>
+                <span class="field-error-msg" id="error-contact-service" role="alert" aria-live="polite"></span>
               </div>
               <div class="form-group">
                 <label for="contact-brand" class="form-label">Brand / Business Name</label>
-                <input type="text" id="contact-brand" class="form-input" placeholder="e.g. Your Clinic or Brand Name" />
+                <input type="text" id="contact-brand" class="form-input" placeholder="e.g. Your Clinic or Brand Name" maxlength="120" autocomplete="organization" aria-describedby="error-contact-brand" />
+                <span class="field-error-msg" id="error-contact-brand" role="alert" aria-live="polite"></span>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="contact-message" class="form-label">Project Details & Requirements</label>
-              <textarea id="contact-message" class="form-input form-textarea" rows="3" placeholder="Briefly describe what you'd like to achieve with your marketing..." required></textarea>
+              <div class="message-label-row">
+                <label for="contact-message" class="form-label">Project Details & Requirements <span class="required-star" aria-hidden="true">*</span></label>
+                <span class="char-counter" id="char-counter" aria-hidden="true">0 / 3000</span>
+              </div>
+              <textarea id="contact-message" class="form-input form-textarea" rows="3" placeholder="Briefly describe what you'd like to achieve with your marketing..." maxlength="3000" required aria-required="true" aria-describedby="error-contact-message"></textarea>
+              <span class="field-error-msg" id="error-contact-message" role="alert" aria-live="polite"></span>
             </div>
 
             <div class="form-actions-row">

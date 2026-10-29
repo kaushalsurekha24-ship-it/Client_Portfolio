@@ -594,67 +594,264 @@ document.addEventListener('DOMContentLoaded', () => {
   // 16. STRATEGIC CONTACT FORM HANDLER (WHATSAPP & EMAIL CHANNELS)
   // ==========================================================================
   /**
-   * INTEGRATED CONTACT CONFIGURATION
-   * 
-   * 1. WHATSAPP RECIPIENT:
-   *    Current testing recipient: 8999160463 (+91 India) -> 918999160463
-   *    To switch to your final business number, edit `whatsappNumber` below.
-   * 
-   * 2. EMAIL SERVICE (Web3Forms / Formspree):
-   *    - Web3Forms: Free, no backend needed. Get a free access key at https://web3forms.com
-   *      Paste your key into `web3formsAccessKey`.
-   *    - Formspree: Create a form at https://formspree.io and paste your endpoint into `formspreeEndpoint`.
-   *    Note: If neither is configured, the form will guide you and prevent false success states.
+   * PORTFOLIO CONTACT & ENQUIRY CONFIGURATION
+   * Architected for strict validation, spam defence, and reliable delivery.
+   * Settings are clearly separated for seamless future client handoff.
    */
   const CONTACT_CONFIG = {
-    whatsappNumber: '918999160463', // Testing number: 8999160463
-    emailProvider: 'web3forms',     // 'web3forms' or 'formspree'
-    web3formsAccessKey: '5197087c-a0fe-426c-818d-b71ab9402632', // Web3Forms Access Key
-    formspreeEndpoint: ''           // Optional alternative
+    // ------------------------------------------------------------------------
+    // 1. PUBLIC_CONTACT_DETAILS (Display-only credentials shown across the site)
+    // ------------------------------------------------------------------------
+    public: {
+      phoneDisplay: '+91 93711 15252',
+      phoneRaw: '+919371115252',
+      location: 'Jalgaon, Maharashtra, India'
+    },
+
+    // ------------------------------------------------------------------------
+    // 2. WHATSAPP_INQUIRY_NUMBER (Recipient number for WhatsApp enquiries)
+    // Current testing recipient: +91 8999160463 (Stored in international format: 918999160463)
+    // For future client handoff: Replace only this number string.
+    // ------------------------------------------------------------------------
+    whatsappNumber: '918999160463', // Testing number: +91 8999160463
+
+    // ------------------------------------------------------------------------
+    // 3. INQUIRY_EMAIL_CONFIGURATION (Form delivery provider)
+    // Web3Forms provides serverless, rate-limited email delivery for static sites.
+    // Provider documentation: https://docs.web3forms.com
+    // Web3Forms uses a public client-side access key designed specifically for static frontends.
+    // ------------------------------------------------------------------------
+    emailProvider: 'web3forms', // 'web3forms' or 'formspree'
+    web3formsAccessKey: '5197087c-a0fe-426c-818d-b71ab9402632',
+    formspreeEndpoint: '', // Optional alternative endpoint
+
+    // ------------------------------------------------------------------------
+    // 4. VALIDATION & SECURITY CONSTRAINTS
+    // ------------------------------------------------------------------------
+    allowedServices: [
+      'Social Media Management',
+      'Graphic Design & Creatives',
+      'Performance Marketing',
+      'Content Creation & Reels',
+      'Digital Branding',
+      'Comprehensive Marketing Consultation'
+    ],
+    limits: {
+      minNameLength: 2,
+      maxNameLength: 100,
+      minMessageLength: 10,
+      maxMessageLength: 3000,
+      maxBrandLength: 120,
+      maxContactLength: 120,
+      cooldownSeconds: 20 // Client-side anti-spam rate limiting between requests
+    }
   };
 
   const contactForm = document.getElementById('strategic-contact-form');
   const formStatusMsg = document.getElementById('form-status-msg');
   const submitWhatsAppBtn = document.getElementById('submit-whatsapp-btn');
   const submitEmailBtn = document.getElementById('submit-email-btn') || document.getElementById('submit-inquiry-btn');
+  const messageInput = document.getElementById('contact-message');
+  const charCounter = document.getElementById('char-counter');
 
-  // Helper to retrieve and sanitize form data
+  // Submission lock and rate-limiting timestamp
+  let isSubmitting = false;
+  let lastSubmitTimestamp = 0;
+
+  // Real-time character counter for Message
+  if (messageInput && charCounter) {
+    messageInput.addEventListener('input', () => {
+      const currentLength = messageInput.value.length;
+      charCounter.textContent = `${currentLength} / ${CONTACT_CONFIG.limits.maxMessageLength}`;
+      if (currentLength > CONTACT_CONFIG.limits.maxMessageLength * 0.9) {
+        charCounter.classList.add('near-limit');
+      } else {
+        charCounter.classList.remove('near-limit');
+      }
+    });
+  }
+
+  // Field-specific accessible error management
+  function setFieldError(fieldId, errorText) {
+    const inputEl = document.getElementById(fieldId);
+    const errorEl = document.getElementById(`error-${fieldId}`);
+    if (inputEl) {
+      inputEl.classList.add('has-error');
+      inputEl.setAttribute('aria-invalid', 'true');
+    }
+    if (errorEl) {
+      errorEl.textContent = errorText;
+      errorEl.classList.add('visible');
+    }
+  }
+
+  function clearFieldError(fieldId) {
+    const inputEl = document.getElementById(fieldId);
+    const errorEl = document.getElementById(`error-${fieldId}`);
+    if (inputEl) {
+      inputEl.classList.remove('has-error');
+      inputEl.removeAttribute('aria-invalid');
+    }
+    if (errorEl) {
+      errorEl.textContent = '';
+      errorEl.classList.remove('visible');
+    }
+  }
+
+  function clearAllFieldErrors() {
+    ['contact-name', 'contact-phone', 'contact-service', 'contact-brand', 'contact-message'].forEach(clearFieldError);
+  }
+
+  // Attach live clear on user input/change
+  ['contact-name', 'contact-phone', 'contact-service', 'contact-brand', 'contact-message'].forEach(fieldId => {
+    const el = document.getElementById(fieldId);
+    if (el) {
+      el.addEventListener('input', () => clearFieldError(fieldId));
+      el.addEventListener('change', () => clearFieldError(fieldId));
+    }
+  });
+
+  // Safe status message renderer (strictly prevents DOM XSS by avoiding unsafe innerHTML with untrusted strings)
+  function setStatusMessage(type, content) {
+    if (!formStatusMsg) return;
+    formStatusMsg.textContent = '';
+    formStatusMsg.className = type ? `form-status-msg active ${type}` : 'form-status-msg active';
+
+    if (typeof content === 'string') {
+      formStatusMsg.textContent = content;
+    } else if (content instanceof Node) {
+      formStatusMsg.appendChild(content);
+    }
+  }
+
+  // Helper to retrieve and trim form data
   function getContactFormData() {
     const nameInput = document.getElementById('contact-name');
     const phoneInput = document.getElementById('contact-phone');
     const serviceInput = document.getElementById('contact-service');
     const brandInput = document.getElementById('contact-brand');
-    const messageInput = document.getElementById('contact-message');
+    const msgInput = document.getElementById('contact-message');
+    const botcheckInput = document.getElementById('contact-botcheck');
 
-    const name = nameInput ? nameInput.value.trim() : '';
-    const phone = phoneInput ? phoneInput.value.trim() : '';
-    const service = serviceInput ? serviceInput.value.trim() : 'Digital Marketing Consultation';
-    const brand = brandInput ? brandInput.value.trim() : '';
-    const message = messageInput ? messageInput.value.trim() : '';
-
-    return { name, phone, service, brand, message };
+    return {
+      name: nameInput ? nameInput.value.trim() : '',
+      phone: phoneInput ? phoneInput.value.trim() : '',
+      service: serviceInput ? serviceInput.value.trim() : '',
+      brand: brandInput ? brandInput.value.trim() : '',
+      message: msgInput ? msgInput.value.trim() : '',
+      botcheck: botcheckInput ? botcheckInput.value.trim() : ''
+    };
   }
 
-  // Helper to validate required inputs
+  // Comprehensive client-side validation
   function validateContactForm(data) {
-    if (!data.name || !data.phone || !data.message) {
-      if (formStatusMsg) {
-        formStatusMsg.className = 'form-status-msg error';
-        formStatusMsg.textContent = 'Please fill in all required fields (Full Name, Contact, and Project Details) before sending.';
-      }
-      return false;
+    clearAllFieldErrors();
+    let isValid = true;
+    let firstInvalidField = null;
+
+    // 0. Anti-spam honeypot check (hidden field)
+    if (data.botcheck && data.botcheck.length > 0) {
+      return { isValid: false, isBot: true };
     }
-    return true;
+
+    // 1. Name validation
+    if (!data.name) {
+      setFieldError('contact-name', 'Please enter your full name.');
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-name';
+    } else if (data.name.length < CONTACT_CONFIG.limits.minNameLength) {
+      setFieldError('contact-name', `Name must be at least ${CONTACT_CONFIG.limits.minNameLength} characters.`);
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-name';
+    } else if (data.name.length > CONTACT_CONFIG.limits.maxNameLength) {
+      setFieldError('contact-name', `Name cannot exceed ${CONTACT_CONFIG.limits.maxNameLength} characters.`);
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-name';
+    } else if (/[\u0000-\u001F\u007F]/.test(data.name)) {
+      setFieldError('contact-name', 'Name contains invalid control characters.');
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-name';
+    }
+
+    // 2. Phone / Email validation
+    if (!data.phone) {
+      setFieldError('contact-phone', 'Please enter your phone number or email address.');
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-phone';
+    } else if (data.phone.length > CONTACT_CONFIG.limits.maxContactLength) {
+      setFieldError('contact-phone', `Contact cannot exceed ${CONTACT_CONFIG.limits.maxContactLength} characters.`);
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-phone';
+    } else if (data.phone.includes('@')) {
+      const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+      if (!emailRegex.test(data.phone)) {
+        setFieldError('contact-phone', 'Please enter a valid email address (e.g. name@example.com).');
+        isValid = false;
+        firstInvalidField = firstInvalidField || 'contact-phone';
+      }
+    } else {
+      const digitsOnly = data.phone.replace(/\D/g, '');
+      const validPhoneChars = /^[+]?[\d\s\-().]{7,25}$/;
+      if (!validPhoneChars.test(data.phone) || digitsOnly.length < 7 || digitsOnly.length > 15) {
+        setFieldError('contact-phone', 'Please enter a valid phone number (min 7 digits) or valid email address.');
+        isValid = false;
+        firstInvalidField = firstInvalidField || 'contact-phone';
+      }
+    }
+
+    // 3. Service validation (strict whitelist)
+    if (!data.service || !CONTACT_CONFIG.allowedServices.includes(data.service)) {
+      setFieldError('contact-service', 'Please select a valid service option from the list.');
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-service';
+    }
+
+    // 4. Brand / Business validation (optional)
+    if (data.brand && data.brand.length > CONTACT_CONFIG.limits.maxBrandLength) {
+      setFieldError('contact-brand', `Brand name cannot exceed ${CONTACT_CONFIG.limits.maxBrandLength} characters.`);
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-brand';
+    }
+
+    // 5. Message validation
+    if (!data.message) {
+      setFieldError('contact-message', 'Please describe your project or requirements.');
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-message';
+    } else if (data.message.length < CONTACT_CONFIG.limits.minMessageLength) {
+      setFieldError('contact-message', `Please provide more detail (minimum ${CONTACT_CONFIG.limits.minMessageLength} characters).`);
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-message';
+    } else if (data.message.length > CONTACT_CONFIG.limits.maxMessageLength) {
+      setFieldError('contact-message', `Message cannot exceed ${CONTACT_CONFIG.limits.maxMessageLength} characters.`);
+      isValid = false;
+      firstInvalidField = firstInvalidField || 'contact-message';
+    }
+
+    if (!isValid && firstInvalidField) {
+      const el = document.getElementById(firstInvalidField);
+      if (el) el.focus();
+    }
+
+    return { isValid, isBot: false };
   }
 
   // ==========================================
   // CHANNEL A: WHATSAPP DIRECT SEND
   // ==========================================
   function handleWhatsAppSubmit() {
-    const data = getContactFormData();
-    if (!validateContactForm(data)) return;
+    if (isSubmitting) return;
 
-    // Construct formatted text with clear hierarchy
+    const data = getContactFormData();
+    const validation = validateContactForm(data);
+    if (!validation.isValid) {
+      if (validation.isBot) {
+        setStatusMessage('error', 'Unable to process submission.');
+      }
+      return;
+    }
+
+    // Format plain-text enquiry with clear structure
     let text = `Hello! I would like to inquire about digital marketing services:\n\n` +
       `• Name: ${data.name}\n` +
       `• Contact: ${data.phone}\n` +
@@ -669,12 +866,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const encodedMessage = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${CONTACT_CONFIG.whatsappNumber}?text=${encodedMessage}`;
 
-    // Status feedback: clear that user must press Send in WhatsApp
-    if (formStatusMsg) {
-      formStatusMsg.className = 'form-status-msg success';
-      formStatusMsg.innerHTML = `Opening WhatsApp with your enquiry pre-filled... <br>` +
-        `<small style="display:inline-block; margin-top:4px;">If WhatsApp did not open automatically, <a href="${whatsappUrl}" target="_blank" rel="noopener noreferrer" style="text-decoration:underline; font-weight:bold; color:inherit;">click here to open WhatsApp</a>. (Press Send in WhatsApp to deliver).</small>`;
-    }
+    // Safe DOM status notification (Zero innerHTML on user inputs)
+    const frag = document.createDocumentFragment();
+    const p1 = document.createElement('div');
+    p1.textContent = 'Opening WhatsApp with your enquiry pre-filled...';
+    frag.appendChild(p1);
+
+    const small = document.createElement('small');
+    small.style.display = 'inline-block';
+    small.style.marginTop = '4px';
+    small.textContent = 'If WhatsApp did not open automatically, ';
+
+    const directLink = document.createElement('a');
+    directLink.href = whatsappUrl;
+    directLink.target = '_blank';
+    directLink.rel = 'noopener noreferrer';
+    directLink.style.textDecoration = 'underline';
+    directLink.style.fontWeight = 'bold';
+    directLink.style.color = 'inherit';
+    directLink.textContent = 'click here to open WhatsApp';
+
+    small.appendChild(directLink);
+    small.appendChild(document.createTextNode('. (Note: Please press Send inside WhatsApp to deliver your message).'));
+    frag.appendChild(small);
+
+    setStatusMessage('success', frag);
 
     // Button animation feedback
     if (submitWhatsAppBtn) {
@@ -687,12 +903,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 1500);
     }
 
-    // Reliable cross-platform launch (mobile + desktop popup-blocker safe)
+    // Cross-platform launch
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     if (isMobile) {
       window.location.href = whatsappUrl;
     } else {
-      const newWin = window.open(whatsappUrl, '_blank');
+      const newWin = window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
       if (!newWin || newWin.closed || typeof newWin.closed === 'undefined') {
         window.location.href = whatsappUrl;
       }
@@ -704,26 +920,53 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   async function handleEmailSubmit(e) {
     if (e && e.preventDefault) e.preventDefault();
+    if (isSubmitting) return;
 
     const data = getContactFormData();
-    if (!validateContactForm(data)) return;
-
-    // Check if a real endpoint/key is configured
-    const hasWeb3FormsKey = Boolean(CONTACT_CONFIG.web3formsAccessKey && CONTACT_CONFIG.web3formsAccessKey.trim());
-    const hasFormspree = Boolean(CONTACT_CONFIG.formspreeEndpoint && CONTACT_CONFIG.formspreeEndpoint.trim());
-
-    if (!hasWeb3FormsKey && !hasFormspree) {
-      if (formStatusMsg) {
-        formStatusMsg.className = 'form-status-msg error';
-        formStatusMsg.innerHTML = `<strong>Email service is not yet configured.</strong><br>` +
-          `Please add your free <a href="https://web3forms.com" target="_blank" rel="noopener noreferrer" style="text-decoration:underline; color:inherit;">Web3Forms Access Key</a> or Formspree endpoint in <code>script.js</code> under <code>CONTACT_CONFIG</code>.<br>` +
-          `<span style="display:inline-block; margin-top:6px;">In the meantime, please click <strong>Send via WhatsApp</strong> to deliver your enquiry immediately!</span>`;
+    const validation = validateContactForm(data);
+    if (!validation.isValid) {
+      if (validation.isBot) {
+        setStatusMessage('error', 'Unable to process submission.');
       }
       return;
     }
 
-    // Visual button loading state
-    const activeBtn = submitEmailBtn || document.getElementById('submit-inquiry-btn');
+    // Rate-limiting check (cooldown)
+    const now = Date.now();
+    const elapsedSeconds = Math.floor((now - lastSubmitTimestamp) / 1000);
+    if (elapsedSeconds < CONTACT_CONFIG.limits.cooldownSeconds) {
+      const waitTime = CONTACT_CONFIG.limits.cooldownSeconds - elapsedSeconds;
+      setStatusMessage('error', `Please wait ${waitTime} second${waitTime > 1 ? 's' : ''} before submitting another enquiry.`);
+      return;
+    }
+
+    // Verify email provider configuration
+    const hasWeb3FormsKey = Boolean(CONTACT_CONFIG.web3formsAccessKey && CONTACT_CONFIG.web3formsAccessKey.trim());
+    const hasFormspree = Boolean(CONTACT_CONFIG.formspreeEndpoint && CONTACT_CONFIG.formspreeEndpoint.trim());
+
+    if (!hasWeb3FormsKey && !hasFormspree) {
+      const frag = document.createDocumentFragment();
+      const strong = document.createElement('strong');
+      strong.textContent = 'Email service is not yet configured.';
+      frag.appendChild(strong);
+      frag.appendChild(document.createElement('br'));
+      const infoSpan = document.createElement('span');
+      infoSpan.textContent = 'Please configure your Web3Forms Access Key or Formspree endpoint in script.js under CONTACT_CONFIG.';
+      frag.appendChild(infoSpan);
+      frag.appendChild(document.createElement('br'));
+      const altSpan = document.createElement('span');
+      altSpan.style.display = 'inline-block';
+      altSpan.style.marginTop = '6px';
+      altSpan.textContent = 'In the meantime, please click "Send via WhatsApp" to deliver your enquiry immediately.';
+      frag.appendChild(altSpan);
+      setStatusMessage('error', frag);
+      return;
+    }
+
+    // Lock submission & update button state
+    isSubmitting = true;
+    if (submitWhatsAppBtn) submitWhatsAppBtn.disabled = true;
+    const activeBtn = submitEmailBtn;
     let origContent = '';
     if (activeBtn) {
       origContent = activeBtn.innerHTML;
@@ -731,14 +974,10 @@ document.addEventListener('DOMContentLoaded', () => {
       activeBtn.innerHTML = '<span>Transmitting Email...</span> <i class="fa-solid fa-circle-notch fa-spin"></i>';
     }
 
-    if (formStatusMsg) {
-      formStatusMsg.className = 'form-status-msg';
-      formStatusMsg.textContent = 'Transmitting your enquiry to our email server...';
-    }
+    setStatusMessage('', 'Transmitting your enquiry to our verified email inbox...');
 
     try {
       if (CONTACT_CONFIG.emailProvider === 'web3forms' && hasWeb3FormsKey) {
-        // Parse email or phone from the contact input
         const emailMatch = data.phone.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
         const emailValue = emailMatch ? emailMatch[0] : (data.phone.includes('@') ? data.phone : undefined);
         const phoneValue = !emailMatch && !data.phone.includes('@') ? data.phone : undefined;
@@ -753,7 +992,8 @@ document.addEventListener('DOMContentLoaded', () => {
           brand: data.brand || 'Not Specified',
           message: data.message,
           from_name: data.name,
-          subject: `New Portfolio Enquiry: ${data.name} — ${data.service}`
+          subject: `Portfolio Enquiry: ${data.name} — ${data.service}`,
+          botcheck: data.botcheck || undefined
         };
 
         const response = await fetch('https://api.web3forms.com/submit', {
@@ -766,14 +1006,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const resData = await response.json().catch(() => ({}));
-        if (response.ok && resData.success) {
-          if (formStatusMsg) {
-            formStatusMsg.className = 'form-status-msg success';
-            formStatusMsg.textContent = `Thank you, ${data.name}! Your enquiry has been delivered successfully. We will respond within 24 business hours.`;
-          }
+
+        if (response.ok && resData.success === true) {
+          lastSubmitTimestamp = Date.now();
+          setStatusMessage('success', `Thank you, ${data.name}! Your enquiry has been delivered successfully. We will respond within 24 business hours.`);
           if (contactForm) contactForm.reset();
+          if (charCounter) charCounter.textContent = `0 / ${CONTACT_CONFIG.limits.maxMessageLength}`;
         } else {
-          throw new Error(resData.message || 'Email delivery provider reported an error. Please try again or reach out directly.');
+          const providerMsg = (resData && typeof resData.message === 'string') ? resData.message : 'Email delivery provider reported an error.';
+          throw new Error(providerMsg);
         }
       } else if (hasFormspree) {
         const response = await fetch(CONTACT_CONFIG.formspreeEndpoint.trim(), {
@@ -792,11 +1033,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (response.ok) {
-          if (formStatusMsg) {
-            formStatusMsg.className = 'form-status-msg success';
-            formStatusMsg.textContent = `Thank you, ${data.name}! Your enquiry has been delivered to our email inbox. We will respond within 24 business hours.`;
-          }
+          lastSubmitTimestamp = Date.now();
+          setStatusMessage('success', `Thank you, ${data.name}! Your enquiry has been delivered to our email inbox. We will respond within 24 business hours.`);
           if (contactForm) contactForm.reset();
+          if (charCounter) charCounter.textContent = `0 / ${CONTACT_CONFIG.limits.maxMessageLength}`;
         } else {
           const resErr = await response.json().catch(() => ({}));
           throw new Error(resErr.error || 'Formspree rejected the submission.');
@@ -804,12 +1044,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     } catch (err) {
       console.error('Email submission error:', err);
-      if (formStatusMsg) {
-        formStatusMsg.className = 'form-status-msg error';
-        formStatusMsg.innerHTML = `<strong>Delivery Failed:</strong> ${err.message || 'Unable to connect to email provider.'}<br>` +
-          `Please use <strong>Send via WhatsApp</strong> to ensure your message is received immediately.`;
-      }
+      // Safe error rendering without innerHTML on error text
+      const frag = document.createDocumentFragment();
+      const strongErr = document.createElement('strong');
+      strongErr.textContent = 'Delivery Notice: ';
+      frag.appendChild(strongErr);
+      const safeErrText = (err && typeof err.message === 'string') ? err.message : 'Unable to connect to email provider.';
+      frag.appendChild(document.createTextNode(safeErrText));
+      frag.appendChild(document.createElement('br'));
+      const fallbackNotice = document.createElement('span');
+      fallbackNotice.style.display = 'inline-block';
+      fallbackNotice.style.marginTop = '4px';
+      fallbackNotice.textContent = 'Please use Send via WhatsApp to ensure your message is received immediately.';
+      frag.appendChild(fallbackNotice);
+      setStatusMessage('error', frag);
+      // Preserves visitor inputs on failure so user does not lose their typed message
     } finally {
+      isSubmitting = false;
+      if (submitWhatsAppBtn) submitWhatsAppBtn.disabled = false;
       if (activeBtn) {
         activeBtn.disabled = false;
         activeBtn.innerHTML = origContent;
@@ -963,8 +1215,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lightboxTitle) lightboxTitle.textContent = title;
     if (lightboxDesc) lightboxDesc.textContent = desc;
     if (lightboxVenue) {
+      lightboxVenue.textContent = '';
       if (venue) {
-        lightboxVenue.innerHTML = `<i class="fa-solid fa-location-dot"></i> ${venue}`;
+        const icon = document.createElement('i');
+        icon.className = 'fa-solid fa-location-dot';
+        lightboxVenue.appendChild(icon);
+        lightboxVenue.appendChild(document.createTextNode(' ' + venue));
         lightboxVenue.style.display = 'inline-flex';
       } else {
         lightboxVenue.style.display = 'none';

@@ -3951,6 +3951,34 @@ body {
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-espresso);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.required-star {
+  color: #b91c1c;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.message-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+
+.char-counter {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #7A6E71;
+  font-family: var(--font-heading);
+}
+
+.char-counter.near-limit {
+  color: #b91c1c;
+  font-weight: 800;
 }
 
 .form-input {
@@ -3969,6 +3997,32 @@ body {
   background: #FFFFFF;
   border-color: var(--color-plum);
   box-shadow: 0 0 0 4px rgba(57, 35, 72, 0.12);
+}
+
+.form-input:focus-visible {
+  outline: 2px solid #C5A268;
+  outline-offset: 1px;
+}
+
+.form-input.has-error {
+  border-color: #b91c1c !important;
+  background: #FFFBFB;
+  box-shadow: 0 0 0 3px rgba(185, 28, 28, 0.16) !important;
+}
+
+.field-error-msg {
+  display: none;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #b91c1c;
+  margin-top: 4px;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.field-error-msg.visible {
+  display: block;
 }
 
 .form-select {
@@ -4006,13 +4060,20 @@ body {
   transition: all var(--transition-fast);
 }
 
+.btn-submit-inquiry:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
 .btn-submit-whatsapp {
   background: #128C7E;
   color: #FFFFFF;
   box-shadow: 0 6px 20px rgba(18, 140, 126, 0.32);
 }
 
-.btn-submit-whatsapp:hover {
+.btn-submit-whatsapp:hover:not(:disabled) {
   background: #075E54;
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(7, 94, 84, 0.42);
@@ -4024,22 +4085,38 @@ body {
   box-shadow: var(--shadow-plum);
 }
 
-.btn-submit-email:hover {
+.btn-submit-email:hover:not(:disabled) {
   background: var(--color-purple);
   transform: translateY(-2px);
   box-shadow: 0 10px 28px rgba(50, 20, 71, 0.38);
 }
 
 .form-status-msg {
-  margin-top: 12px;
+  margin-top: 14px;
   font-family: var(--font-heading);
   font-size: 0.92rem;
   font-weight: 700;
   text-align: center;
+  padding: 10px 16px;
+  border-radius: 12px;
+  display: none;
 }
 
-.form-status-msg.success { color: #166534; }
-.form-status-msg.error { color: #b91c1c; }
+.form-status-msg.active {
+  display: block;
+}
+
+.form-status-msg.success {
+  color: #166534;
+  background: rgba(22, 101, 52, 0.08);
+  border: 1px solid rgba(22, 101, 52, 0.25);
+}
+
+.form-status-msg.error {
+  color: #991b1b;
+  background: rgba(185, 28, 28, 0.08);
+  border: 1px solid rgba(185, 28, 28, 0.25);
+}
 
 /* Direct Contact Chips */
 .contact-links-pills {
