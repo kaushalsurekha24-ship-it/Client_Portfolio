@@ -2636,198 +2636,307 @@ body {
 }
 
 /* ==========================================================================
-   SECTION 6: COMPREHENSIVE RESUME & CV (SOFT WHITE EDITORIAL SURFACE)
+   SECTION 6: ENHANCED RESUME & CV (PREMIUM GRAPHIC DESIGNER EDITORIAL FOLIO)
    ========================================================================== */
 .resume-section {
-  background: #FFFFFF;
+  background: var(--color-porcelain);
   border-top: 1px solid var(--color-beige-border);
+  position: relative;
+  padding: 100px 0;
 }
 
 .resume-cta-bar {
   display: flex;
   justify-content: center;
-  gap: 14px;
-  margin-top: 24px;
+  gap: 16px;
+  margin-top: 26px;
   flex-wrap: wrap;
 }
 
 .btn-print-resume {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 11px 24px;
+  gap: 10px;
+  padding: 12px 26px;
   border-radius: 9999px;
-  background: var(--color-purple);
+  background: #321447; /* Deep Plum */
   color: #FFFFFF;
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
-  border: none;
+  border: 1px solid rgba(197, 162, 104, 0.45); /* Antique Gold Hairline */
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(50, 20, 71, 0.25);
+  box-shadow: 0 6px 18px rgba(50, 20, 71, 0.28);
   transition: all var(--transition-fast);
 }
 
+.btn-print-resume i {
+  color: #C5A268; /* Antique Gold */
+  transition: transform 0.25s ease;
+}
+
 .btn-print-resume:hover {
-  background: var(--color-plum);
+  background: #49245F; /* Rich Plum */
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(50, 20, 71, 0.35);
+  border-color: #C5A268;
+  box-shadow: 0 10px 24px rgba(50, 20, 71, 0.38);
+}
+
+.btn-print-resume:hover i {
+  transform: scale(1.15);
 }
 
 .btn-call-resume {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 11px 24px;
+  gap: 10px;
+  padding: 12px 26px;
   border-radius: 9999px;
-  background: var(--color-porcelain);
-  color: var(--color-espresso);
+  background: #FFFFFF;
+  color: #35272A; /* Espresso */
   font-family: var(--font-heading);
   font-size: 0.88rem;
   font-weight: 700;
-  border: 1.5px solid var(--color-camel);
+  border: 1.5px solid #7A2838; /* Burgundy */
   text-decoration: none;
+  box-shadow: 0 4px 14px rgba(53, 39, 42, 0.08);
   transition: all var(--transition-fast);
 }
 
+.btn-call-resume i {
+  color: #7A2838; /* Burgundy */
+  transition: transform 0.25s ease;
+}
+
 .btn-call-resume:hover {
-  background: var(--color-camel);
+  background: #7A2838; /* Burgundy */
   color: #FFFFFF;
   transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(122, 40, 56, 0.3);
 }
 
+.btn-call-resume:hover i {
+  color: #FFFFFF;
+  transform: scale(1.15);
+}
+
+/* ── Editorial Resume Folio Container ── */
 .resume-editorial-layout {
   display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: 36px;
+  grid-template-columns: 330px 1fr;
+  background: #FFFFFF;
+  border: 1px solid rgba(197, 162, 104, 0.38); /* Antique Gold Frame */
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(50, 20, 71, 0.09), 0 2px 10px rgba(53, 39, 42, 0.04);
   margin-top: 48px;
-  align-items: flex-start;
+  overflow: hidden;
+  position: relative;
 }
 
-/* Resume Sidebar */
+/* ── Dark Editorial Sidebar (Deep Plum & Espresso) ── */
 .resume-sidebar {
+  background: linear-gradient(172deg, #321447 0%, #3e1b54 42%, #35272A 100%);
+  color: #F7F5F0;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 28px;
+  border-right: 1px solid rgba(197, 162, 104, 0.25);
+  position: relative;
+  overflow: hidden;
 }
 
-.resume-profile-card {
-  background: var(--color-porcelain);
-  border: 1.5px solid var(--color-beige-border);
-  border-radius: 22px;
-  padding: 28px 24px;
-  box-shadow: var(--shadow-subtle);
-  text-align: center;
+.sidebar-botanical-watermark {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 140px;
+  height: 140px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.resume-sidebar-identity {
+  text-align: left;
 }
 
 .resume-avatar-badge {
-  width: 58px;
-  height: 58px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
-  background: var(--color-purple);
-  color: var(--color-gold-light);
+  background: rgba(73, 36, 95, 0.7);
+  border: 1.5px solid #C5A268;
+  color: #C5A268;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.45rem;
-  margin: 0 auto 16px auto;
-  box-shadow: 0 4px 16px rgba(50, 20, 71, 0.22);
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
 .resume-candidate-name {
   font-family: var(--font-serif);
-  font-size: 1.45rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  color: var(--color-purple);
-  margin-bottom: 4px;
+  color: #FFFFFF;
+  line-height: 1.18;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 
 .resume-candidate-role {
   font-family: var(--font-heading);
-  font-size: 0.84rem;
+  font-size: 0.78rem;
   font-weight: 800;
-  color: var(--color-plum);
+  color: #C9B8D9; /* Dusty Lavender */
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
+  letter-spacing: 1.8px;
+  margin-bottom: 16px;
 }
 
 .resume-location-tag {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-size: 0.82rem;
-  color: var(--color-espresso-muted);
-  margin-bottom: 16px;
+  color: rgba(247, 245, 240, 0.85);
+  margin-bottom: 14px;
+}
+
+.resume-location-tag i {
+  color: #C5A268; /* Antique Gold */
+}
+
+.resume-contact-link-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .resume-phone-badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  color: var(--color-espresso);
-  background: var(--color-linen);
-  border: 1px solid var(--color-khaki);
-  padding: 6px 14px;
+  color: #F7F5F0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 162, 104, 0.4);
+  padding: 8px 16px;
   border-radius: 9999px;
   text-decoration: none;
   transition: all var(--transition-fast);
+  width: fit-content;
+}
+
+.resume-phone-badge i {
+  color: #C5A268;
 }
 
 .resume-phone-badge:hover {
-  background: var(--color-gold);
-  color: var(--color-espresso-dark);
+  background: #C5A268;
+  color: #321447;
+  border-color: #C5A268;
+  transform: translateY(-1px);
+}
+
+.resume-phone-badge:hover i {
+  color: #321447;
+}
+
+.sidebar-gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(197, 162, 104, 0.6) 0%, rgba(201, 184, 217, 0.25) 70%, transparent 100%);
+  margin: 6px 0;
 }
 
 .resume-side-block {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
-  border-radius: 20px;
-  padding: 24px;
-  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .side-block-heading {
   font-family: var(--font-heading);
-  font-size: 0.94rem;
+  font-size: 0.74rem;
   font-weight: 800;
-  color: var(--color-espresso);
+  color: #C5A268; /* Antique Gold */
+  text-transform: uppercase;
+  letter-spacing: 2px;
   display: flex;
   align-items: center;
   gap: 8px;
-  margin-bottom: 14px;
-  border-bottom: 1px solid var(--color-khaki);
-  padding-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(197, 162, 104, 0.25);
 }
 
 .side-block-heading i {
-  color: var(--color-gold);
+  color: #C9B8D9; /* Dusty Lavender */
+  font-size: 0.8rem;
 }
 
 .side-block-list {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7px;
+  padding: 0;
+  margin: 0;
 }
 
 .side-block-list li {
   position: relative;
   padding-left: 16px;
-  font-size: 0.88rem;
-  color: var(--color-espresso);
-  font-weight: 600;
+  font-size: 0.86rem;
+  color: rgba(247, 245, 240, 0.92);
+  font-weight: 500;
+  line-height: 1.45;
 }
 
 .side-block-list li::before {
   content: '•';
   position: absolute;
   left: 0;
-  color: var(--color-gold);
+  color: #C5A268;
   font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.resume-edu-item {
+  margin-bottom: 12px;
+}
+
+.resume-edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.edu-degree {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+.edu-inst {
+  display: block;
+  font-size: 0.78rem;
+  color: #C9B8D9;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.edu-notes {
+  font-size: 0.78rem;
+  color: rgba(247, 245, 240, 0.75);
+  line-height: 1.45;
+  margin-top: 4px;
 }
 
 .language-chips-wrap {
@@ -2838,84 +2947,124 @@ body {
 
 .lang-chip {
   font-family: var(--font-heading);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-espresso);
-  background: var(--color-linen);
-  border: 1px solid var(--color-khaki);
-  padding: 5px 12px;
+  color: #F7F5F0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(197, 162, 104, 0.35);
+  padding: 4px 12px;
   border-radius: 9999px;
 }
 
-.resume-edu-item {
-  margin-bottom: 14px;
+.sidebar-interests-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.resume-edu-item:last-child {
-  margin-bottom: 0;
-}
-
-.edu-degree {
-  display: block;
+.sidebar-interest-chip {
   font-family: var(--font-heading);
-  font-size: 0.92rem;
-  font-weight: 800;
-  color: var(--color-espresso-dark);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #F7F5F0;
+  background: rgba(73, 36, 95, 0.45);
+  border: 1px solid rgba(201, 184, 217, 0.3);
+  padding: 3px 10px;
+  border-radius: 6px;
 }
 
-.edu-inst {
-  display: block;
-  font-size: 0.82rem;
-  color: var(--color-cocoa);
-  font-weight: 700;
-  margin-bottom: 4px;
-}
-
-.edu-notes {
-  font-size: 0.8rem;
-  color: var(--color-espresso-muted);
-  line-height: 1.45;
-}
-
-/* Resume Main Timeline */
+/* ── Main Light Content Area ── */
 .resume-main-timeline {
+  background: #FFFFFF;
+  padding: 42px 46px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 36px;
+}
+
+.resume-folio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(197, 162, 104, 0.3);
+}
+
+.folio-meta-kicker {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #7A2838; /* Burgundy */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.folio-meta-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #59664E; /* Deep Sage */
+  background: rgba(168, 181, 160, 0.18);
+  border: 1px solid rgba(168, 181, 160, 0.4);
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.status-indicator-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #59664E;
+  display: inline-block;
 }
 
 .resume-section-card {
-  background: #FFFFFF;
-  border: 1.5px solid var(--color-khaki);
-  border-radius: 24px;
-  padding: 34px 32px;
-  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .resume-card-title {
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 800;
-  color: var(--color-espresso-dark);
+  font-family: var(--font-serif);
+  font-size: 1.48rem;
+  font-weight: 700;
+  color: #321447; /* Deep Plum */
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid var(--color-khaki);
-  padding-bottom: 14px;
+  margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(197, 162, 104, 0.35); /* Antique Gold Hairline */
 }
 
-.resume-card-title i {
-  color: var(--color-gold);
+.title-num-tag {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #C5A268;
+  background: rgba(197, 162, 104, 0.12);
+  border: 1px solid rgba(197, 162, 104, 0.35);
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
 }
 
 .resume-summary-text {
   font-size: 1.02rem;
-  line-height: 1.75;
-  color: var(--color-espresso);
+  line-height: 1.8;
+  color: #35272A; /* Espresso */
+  margin: 0;
 }
 
-/* Timeline Components */
+/* ── Refined Vertical Timeline ── */
 .resume-exp-timeline {
   display: flex;
   flex-direction: column;
@@ -2929,26 +3078,14 @@ body {
   top: 10px;
   bottom: 10px;
   left: 7px;
-  width: 2.5px;
-  background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-camel) 45%, var(--color-lavender) 80%, var(--color-khaki) 100%);
+  width: 2px;
+  background: linear-gradient(180deg, #C5A268 0%, #7A2838 55%, #C9B8D9 100%);
   border-radius: 9999px;
-}
-
-@keyframes radarPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(201, 164, 109, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(201, 164, 109, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(201, 164, 109, 0);
-  }
 }
 
 .exp-timeline-item {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .exp-timeline-item:last-child {
@@ -2957,99 +3094,184 @@ body {
 
 .exp-timeline-marker {
   position: absolute;
-  top: 5px;
+  top: 6px;
   left: -28px;
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: var(--color-gold);
-  border: 3px solid #FFFFFF;
-  box-shadow: 0 0 0 2px var(--color-gold-border);
-  animation: radarPulse 2.4s infinite ease-in-out;
+  background: #FFFFFF;
+  border: 3px solid #7A2838; /* Burgundy Node */
+  box-shadow: 0 0 0 3px rgba(197, 162, 104, 0.4); /* Antique Gold Ring */
   transition: all 0.3s ease;
 }
 
 .exp-timeline-item:hover .exp-timeline-marker {
-  background: var(--color-burgundy);
-  transform: scale(1.22);
+  background: #C5A268;
+  border-color: #321447;
+  transform: scale(1.18);
+  box-shadow: 0 0 0 4px rgba(122, 40, 56, 0.3);
 }
 
 .exp-header-row {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .exp-role-title {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.16rem;
   font-weight: 800;
-  color: var(--color-espresso-dark);
+  color: #321447; /* Deep Plum */
+  margin: 0;
 }
 
 .exp-time-badge {
   font-family: var(--font-heading);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--color-espresso);
-  background: var(--color-beige-light);
-  border: 1px solid var(--color-khaki);
+  letter-spacing: 0.9px;
+  color: #7A2838; /* Burgundy */
+  background: #FAF8F5;
+  border: 1px solid rgba(122, 40, 56, 0.25);
   padding: 3px 10px;
   border-radius: 9999px;
 }
 
 .exp-org-name {
-  display: block;
-  font-size: 0.88rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.86rem;
   font-weight: 700;
-  color: var(--color-espresso-muted);
+  color: #7A2838; /* Burgundy Subtitle */
   margin-bottom: 12px;
 }
 
 .exp-bullets-list {
-  list-style: disc;
-  padding-left: 18px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
 .exp-bullets-list li {
+  position: relative;
+  padding-left: 18px;
   font-size: 0.94rem;
-  line-height: 1.65;
-  color: var(--color-espresso);
+  line-height: 1.68;
+  color: #35272A; /* Espresso text */
 }
 
-/* Skills Categories Grid */
+.exp-bullets-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: #C5A268; /* Antique Gold Arrow */
+  font-size: 0.88rem;
+  top: 1px;
+}
+
+.exp-bullets-list li strong {
+  color: #321447;
+  font-weight: 700;
+}
+
+/* ── Verified Recognitions Strip (Highlights in Resume) ── */
+.resume-honors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.resume-honor-item {
+  background: #FAF8F5;
+  border: 1px solid rgba(197, 162, 104, 0.35);
+  border-left: 3px solid #7A2838; /* Burgundy left accent */
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all var(--transition-fast);
+}
+
+.resume-honor-item:hover {
+  transform: translateY(-2px);
+  border-color: #C5A268;
+  border-left-color: #321447;
+  box-shadow: 0 6px 18px rgba(50, 20, 71, 0.08);
+}
+
+.honor-item-badge {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7A2838;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.honor-item-badge i {
+  color: #C5A268;
+}
+
+.honor-item-title {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #321447;
+  line-height: 1.3;
+}
+
+.honor-item-desc {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: #5E484A;
+}
+
+/* ── Core Skills Categorized Grid ── */
 .resume-skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 16px;
 }
 
 .skill-category-box {
-  background: var(--color-porcelain);
-  border: 1.5px solid var(--color-beige-border);
-  border-radius: 16px;
+  background: #FAF8F5;
+  border: 1px solid rgba(197, 162, 104, 0.3);
+  border-radius: 14px;
   padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .skill-cat-title {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-heading);
-  font-size: 0.88rem;
+  font-size: 0.76rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  color: var(--color-purple);
-  margin-bottom: 12px;
-  border-bottom: 1px solid var(--color-beige-border);
-  padding-bottom: 6px;
+  letter-spacing: 1.2px;
+  color: #7A2838; /* Burgundy Category Label */
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(197, 162, 104, 0.28);
+}
+
+.skill-cat-title i {
+  color: #C5A268;
 }
 
 .skill-tags-flow {
@@ -3060,20 +3282,20 @@ body {
 
 .skill-tags-flow span {
   font-family: var(--font-heading);
-  font-size: 0.76rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  color: var(--color-espresso);
+  color: #35272A;
   background: #FFFFFF;
-  border: 1px solid var(--color-beige-border);
-  padding: 4px 10px;
+  border: 1px solid rgba(197, 162, 104, 0.25);
+  padding: 5px 11px;
   border-radius: 9999px;
   transition: all var(--transition-fast);
 }
 
 .skill-tags-flow span:hover {
-  background: var(--color-lavender-soft);
-  border-color: var(--color-lavender);
-  color: var(--color-purple);
+  background: #C9B8D9; /* Dusty Lavender */
+  border-color: #321447;
+  color: #321447;
 }
 
 /* ==========================================================================
@@ -3191,8 +3413,29 @@ body {
 }
 
 .achieve-img.photo-contain {
-  object-fit: contain;
-  background: #200B2B;
+  object-fit: cover;
+  object-position: top center;
+  background: #FFFFFF;
+}
+
+#achieve-card-rotary .achieve-photo-frame:first-child .achieve-img {
+  object-position: center 72%;
+}
+
+#achieve-card-rotary .achieve-photo-frame:last-child .achieve-img {
+  object-position: center 22%;
+}
+
+#achieve-card-rotaract .achieve-img {
+  object-position: center 42%;
+}
+
+#achieve-card-teressa .achieve-photo-frame:first-child .achieve-img {
+  object-position: center 30%;
+}
+
+#achieve-card-teressa .achieve-photo-frame:last-child .achieve-img {
+  object-position: center 40%;
 }
 
 /* Fallback placeholder when photo is awaiting import */
@@ -3476,13 +3719,13 @@ body {
   border-radius: 20px;
   max-width: 900px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 94vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(197, 162, 104, 0.5);
   transform: scale(0.94);
-  transition: transform 0.35s var(--ease-cinematic);
+  transition: transform 0.35s var(--ease-cinematic), width 0.25s ease, max-width 0.25s ease;
 }
 
 .achievement-lightbox-modal.active .lightbox-dialog-window {
@@ -3493,41 +3736,45 @@ body {
   position: absolute;
   top: 14px;
   right: 14px;
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid var(--color-gold);
+  background: rgba(30, 8, 42, 0.85);
+  border: 1.5px solid var(--color-gold);
   color: #F7F5F0;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 15;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
 .lightbox-dismiss-btn:hover {
   background: var(--color-burgundy);
-  transform: rotate(90deg);
+  transform: rotate(90deg) scale(1.08);
 }
 
 .lightbox-media-viewport {
   width: 100%;
-  max-height: 60vh;
-  background: #110318;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
+  border-bottom: 1.5px solid rgba(197, 162, 104, 0.4);
 }
 
 .lightbox-display-img {
-  max-width: 100%;
-  max-height: 60vh;
+  width: 100%;
+  height: auto;
+  max-height: 68vh;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
 .lightbox-meta-panel {
@@ -3927,8 +4174,7 @@ body {
   .methodology-timeline { grid-template-columns: repeat(2, 1fr); }
   .achievements-timeline { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .resume-editorial-layout { grid-template-columns: 1fr; }
-  .resume-skills-grid { grid-template-columns: 1fr; }
+  .resume-editorial-layout { grid-template-columns: 290px 1fr; }
   .author-showcase-grid { grid-template-columns: 1fr; gap: 48px; }
   .book-3d-stage { min-height: 450px; padding: 20px 10px 24px 10px; }
 }
@@ -3967,6 +4213,11 @@ body {
     gap: 14px;
     padding: 16px 16px 0 16px;
   }
+  .resume-editorial-layout { grid-template-columns: 1fr; }
+  .resume-sidebar { border-right: none; border-bottom: 1px solid rgba(197, 162, 104, 0.35); padding: 32px 24px; }
+  .resume-main-timeline { padding: 32px 24px; }
+  .resume-honors-grid { grid-template-columns: 1fr; }
+  .resume-skills-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
@@ -3991,7 +4242,11 @@ body {
   .nav-container { padding: 14px 20px; }
   .achievement-card { flex-direction: column; gap: 14px; }
   .achieve-badge-col { align-items: flex-start; }
-  .resume-section-card { padding: 24px 18px; }
+  .resume-section { padding: 60px 0; }
+  .resume-sidebar { padding: 26px 18px; }
+  .resume-main-timeline { padding: 26px 18px; }
+  .resume-candidate-name { font-size: 1.5rem; }
+  .exp-role-title { font-size: 1.05rem; }
   .resume-exp-timeline { padding-left: 20px; }
   .exp-timeline-marker { left: -20px; }
   .book-3d-stage { min-height: 410px; }
@@ -4036,13 +4291,30 @@ body {
   .resume-editorial-layout {
     display: flex !important;
     flex-direction: column !important;
+    border: none !important;
+    box-shadow: none !important;
   }
-  .resume-profile-card,
-  .resume-section-card,
-  .resume-side-block {
+  .resume-sidebar {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border: 1px solid #CCCCCC !important;
+    padding: 20px !important;
+  }
+  .resume-candidate-name { color: #111111 !important; }
+  .resume-candidate-role { color: #333333 !important; }
+  .resume-sidebar-identity, .resume-side-block { color: #111111 !important; }
+  .side-block-heading { color: #111111 !important; border-bottom-color: #CCCCCC !important; }
+  .side-block-list li { color: #111111 !important; }
+  .resume-main-timeline {
+    padding: 20px 0 !important;
+    box-shadow: none !important;
+  }
+  .resume-section-card {
     box-shadow: none !important;
     border: 1px solid #CCCCCC !important;
     break-inside: avoid;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
   }
 }
 

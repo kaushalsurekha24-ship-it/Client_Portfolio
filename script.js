@@ -856,8 +856,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .dignitary-card,
     .speaking-box,
     .book-pillars-box,
-    .resume-profile-card,
-    .resume-side-block,
+    .resume-editorial-layout,
     .resume-section-card,
     .achievement-card,
     .achievement-card-luxury,
@@ -898,6 +897,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const lightboxTitle = document.getElementById('lightbox-title');
   const lightboxDesc = document.getElementById('lightbox-desc');
   const lightboxVenue = document.getElementById('lightbox-venue');
+  const lightboxDialog = lightboxModal ? lightboxModal.querySelector('.lightbox-dialog-window') : null;
+
+  function syncLightboxDialogSize() {
+    if (!lightboxDialog || !lightboxImg || !lightboxImg.src || !lightboxImg.naturalWidth) return;
+
+    const nw = lightboxImg.naturalWidth;
+    const nh = lightboxImg.naturalHeight;
+    const ratio = nw / nh; // e.g. 1024 / 859 ≈ 1.192
+
+    const vh = window.innerHeight;
+    const vw = window.innerWidth;
+
+    const maxAllowedWidth = Math.min(vw * 0.94, 940);
+    const targetImgHeight = Math.min(vh * 0.66, 680);
+
+    let exactWidth = targetImgHeight * ratio;
+
+    if (exactWidth > maxAllowedWidth) {
+      exactWidth = maxAllowedWidth;
+    }
+    if (exactWidth < 380 && maxAllowedWidth >= 380) {
+      exactWidth = Math.min(460, maxAllowedWidth);
+    }
+
+    lightboxDialog.style.width = `${Math.round(exactWidth)}px`;
+    lightboxDialog.style.maxWidth = `${Math.round(exactWidth)}px`;
+  }
 
   function openAchievementLightbox(frame) {
     if (!lightboxModal || !frame) return;
@@ -907,14 +933,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const desc = frame.getAttribute('data-caption-desc') || '';
     const venue = frame.getAttribute('data-caption-venue') || '';
 
+    const isNewspaper = frame.classList.contains('contain-mode') || (imgEl && imgEl.classList.contains('photo-contain'));
+    const mediaViewport = lightboxModal.querySelector('.lightbox-media-viewport');
+    if (mediaViewport) {
+      mediaViewport.style.background = isNewspaper ? '#FFFFFF' : '#0F0415';
+    }
+
     if (imgEl && imgEl.src && !imgEl.classList.contains('img-fallback-active')) {
       lightboxImg.src = imgEl.src;
       lightboxImg.alt = imgEl.alt || title;
       lightboxImg.style.display = 'block';
+
+      if (lightboxImg.complete && lightboxImg.naturalWidth) {
+        syncLightboxDialogSize();
+      } else {
+        lightboxImg.onload = syncLightboxDialogSize;
+      }
     } else {
       // If photo is pending import, set placeholder or descriptive preview
       lightboxImg.src = imgEl ? imgEl.src : '';
       lightboxImg.alt = title;
+      if (lightboxDialog) {
+        lightboxDialog.style.width = '';
+        lightboxDialog.style.maxWidth = '900px';
+      }
     }
 
     if (lightboxCategory) lightboxCategory.textContent = cat;
@@ -972,6 +1014,12 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
       closeAchievementLightbox();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    if (lightboxModal && lightboxModal.classList.contains('active')) {
+      syncLightboxDialogSize();
     }
   });
 
